@@ -1,10 +1,9 @@
-import './App.css';
-import Form from './components/Form/Form';
+import FormSignup from './components/Form/FormSignup';
 
 function App() {
   return (
-    <div className="App">
-      <Form />
+    <div className="App"> 
+      <FormSignup />
     </div>
   );
 }
