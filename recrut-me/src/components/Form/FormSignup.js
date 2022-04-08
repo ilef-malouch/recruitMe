@@ -1,6 +1,5 @@
 import React from 'react'
 import "./FormSignUp.css"
-import {Helmet} from "react-helmet";
 
 
 class FormSignup extends React.Component {
@@ -27,10 +26,62 @@ class FormSignup extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+   loadScript = function(src) {
+    var tag = document.createElement('script');
+    tag.async = false;
+    tag.src = src;
+    document.getElementsByTagName('body')[0].appendChild(tag);
+    }
+    
+   handleNext1=function(){
+     var  Form1= document.getElementById("Form1");
+     var  Form2= document.getElementById("Form2");
+     var progress= document.getElementById("progress");
+     
+     Form1.style.left="-450px";
+     Form2.style.left="40px";
+     progress.style.width="240px";
+     
+    }
+
+    handleBack1=function(){
+      var Form1= document.getElementById("Form1");
+      var Form2= document.getElementById("Form2");
+      var progress= document.getElementById("progress"); 
+       
+      
+      Form1.style.left="40px";
+      Form2.style.left="450px";
+      progress.style.width="120px";
+     }
+
+     handleNext2=function(){
+      var  Form2= document.getElementById("Form2");
+      var  Form3= document.getElementById("Form3");
+      var progress= document.getElementById("progress");  
+      
+      Form2.style.left="-450px";
+      Form3.style.left="40px";
+      progress.style.width="360px";
+    }
+     
+
+     handleBack2=function(){
+      var  Form3= document.getElementById("Form3");
+      var  Form2= document.getElementById("Form2");
+      var progress= document.getElementById("progress");
+
+      Form2.style.left="40px";
+      Form3.style.left="450px";
+      progress.style.width="240px";
+     }
+
+
   
   render() {
     return (
-      <div className="formContainer">
+      <div className="containerForm">
+        <div className="formContainer">
         <form id="Form1">
           <h3>Personal Infos</h3>
           
@@ -40,7 +91,7 @@ class FormSignup extends React.Component {
             <input type="text" value={this.state.infos.Domaine} placeholder="Domaine" onChange={this.handleChange} required/>
          
             <div className="btn-box">
-              <button type="button" id="Next1">Next</button>
+              <button type="button" id="Next1" onClick={()=>this.handleNext1()}>Next</button>
             </div>
         </form>
 
@@ -53,8 +104,8 @@ class FormSignup extends React.Component {
             <input type="text" value={this.state.auth.PhoneNumber} placeholder="PhoneNumber" onChange={this.handleChange} required/>
          
             <div className="btn-box">
-              <button type="button" id="Back1">Back</button>
-              <button type="button" id="Next2">Next</button>
+              <button type="button" id="Back1" onClick={()=>this.handleBack1()}>Back</button>
+              <button type="button" id="Next2" onClick={()=>this.handleNext2()}>Next</button>
             </div>
         </form>
 
@@ -67,7 +118,7 @@ class FormSignup extends React.Component {
             <input type="password" value={this.state.auth.CofirmedPassword} placeholder="CofirmedPassword" onChange={this.handleChange} required/>
          
             <div className="btn-box">
-              <button type="button" id="Back2">Back</button>
+              <button type="button" id="Back2" onClick={()=>this.handleBack2()}>Back</button>
               <button type="button">Submit</button>
             </div>
         </form>
@@ -77,15 +128,15 @@ class FormSignup extends React.Component {
             <div className="step-col"><small>Step 1</small></div>
             <div className="step-col"><small>Step 2</small></div>
             <div className="step-col"><small>Step 3</small></div>
-         
+            
           
         </div>
-        <Helmet>
-          <script src="./script.js" type="text/javascript"></script>
-        </Helmet>
+        
        
       
      </div>
+      
+      </div>
       
     );
   }

@@ -5,10 +5,10 @@
    
 }
 
-body{
-    background-color: beige;
+.containerForm{
+    background-image: url("./images/jobs-background.jpg");
+    
 }
-
 .formContainer{
     width:360px;
     height:600px;
@@ -16,6 +16,8 @@ body{
     background:#fff;
     border-radius:5px ;
     position:relative;
+    overflow:hidden;
+ 
 }
 
 h3{
@@ -29,7 +31,7 @@ h3{
     position:absolute;
     top:100px;
     left:40px;
-    
+    transition:0.5s;
 }
 
 form input{
@@ -82,7 +84,7 @@ form button{
 .step-col{
     width: 120px;
     text-align:center;
-    color: #fff;
+    color: #777;
     position:relative;
 }
 
@@ -91,7 +93,7 @@ form button{
     height:100%;
     width:120px;
     background: linear-gradient(to right, #131A79 ,#131A79);
-
+    transition:1s;
 }
 
 #progress::after{
