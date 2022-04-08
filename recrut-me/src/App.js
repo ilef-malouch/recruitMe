@@ -1,13 +1,6 @@
-import './App.css';
-
-//import Form from './components/Form/Form';
-import Home from './components/pages/Home';
-
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <div className="App"></div>
   );
 }
 
