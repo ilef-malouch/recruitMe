@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding:0 ;
+    font-family:sans-serif;
+}
+
+.containerForm{
+    background-image: url("./images/jobs-background.jpg");
+    height:700px;
+}
+.formContainer{
+    top:80px;
+    width:360px;
+    height:500px;
+    margin:8% auto;
+    background: rgb(212, 211, 211);
+    background: rgba(246, 244, 244, 0.4);
+    border-radius:5px ;
+    position:relative;
+    overflow:hidden;
+}
+
+h3{
+    text-align:center;
+    margin-bottom:20px;
+    color:#27095b;
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    margin-top: -20px;
+}
+
+.formContainer form{
+    width:280px;
+    position:absolute;
+    top:100px;
+    left:40px;
+    transition:0.5s;
+    
+}
+
+form input{
+    width:100%;
+    padding:10px 5px;
+    margin:5px 0;
+    border:0;
+    border-bottom:1px solid #999;
+    outline:none;
+    background:transparent;
+}
+
+::placeholder{
+    color:rgb(77, 75, 75);
+}
+
+
+
+
+.signUp a{
+    position:relative;
+    color:rgb(76, 75, 78);
+    font-size:small;
+    left: 50px;
+    top:-15px;
+    
+}

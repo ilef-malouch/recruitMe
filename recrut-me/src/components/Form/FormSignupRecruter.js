@@ -1,13 +1,14 @@
 import React from 'react'
-import "./FormSignUp.css"
+import "./FormSignupRecruter.css"
+import Icons from './icons'
 
 
-class FormSignup extends React.Component {
+class FormSignupRecruter extends React.Component {
 
   handleChange(event) {
-    const infos={FamilyName:event.target.FamilyName ,FirstName:event.target.FirstName, Domaine:event.target.Domaine}
+    const infos={CompagnyName:event.target.CompagnyName ,id:event.target.id, Domaine:event.target.Domaine}
     const auth={Email:event.target.Email ,Password:event.target.Password, CofirmedPassword:event.target.CofirmedPassword}
-    const links={Github:event.target.Github ,Linkedin:event.target.Linkedin ,PhoneNumber:event.target.PhoneNumber}
+    const links={Github:event.target.Facebook ,Linkedin:event.target.Linkedin ,PhoneNumber:event.target.PhoneNumber}
     
     this.setState({infos,auth,links});
   }
@@ -20,9 +21,9 @@ class FormSignup extends React.Component {
   constructor(props) {
     super(props);
     this.state = 
-                {infos:{FamilyName:"" ,FirstName:"", Domaine:""},
+                {infos:{CompagnyName:"" ,id:"", Domaine:""},
                 auth:{Email:"" ,Password:"", CofirmedPassword:""},
-                links:{Github:"" ,Linkedin:"" ,PhoneNumber:""}
+                links:{Facebook:"" ,Linkedin:"" ,PhoneNumber:""}
                 };
 
     this.handleChange = this.handleChange.bind(this);
@@ -79,24 +80,24 @@ class FormSignup extends React.Component {
        <div className="formContainer">
         
         <form id="Form1">
-          <h3>Personal Infos</h3>
+          <h3>Compagny Infos</h3>
           
-            <input type="text" value={this.state.infos.FamilyName} placeholder="FamilyName" onChange={this.handleChange} required/>
-            <input type="text"  value={this.state.infos.FirstName} placeholder="FirstName" onChange={this.handleChange} required/>
-            <input type="date" placeholder="Date Of Birth" required/>
+            <input type="text" value={this.state.infos.CompagnyName} placeholder="CompagnyName" onChange={this.handleChange} required/>
+            <input type="text"  value={this.state.infos.id} placeholder="id" onChange={this.handleChange} required/>
             <input type="text" value={this.state.infos.Domaine} placeholder="Domaine" onChange={this.handleChange} required/>
          
             <div className="btn-box">
               <button type="button" id="Next1" onClick={()=>this.handleNext1()}>Next</button>
             </div>
-            <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
+            
         </form>
 
 
         <form id="Form2">
           <h3>Social Links</h3>
             
-            <input type="text" value={this.state.auth.Github} placeholder="Github link" onChange={this.handleChange} required/>
+            <input type="text" value={this.state.auth.Github} placeholder="Facebook link" onChange={this.handleChange} required/>
             <input type="text" value={this.state.auth.Linkedin} placeholder="Linkedin link" onChange={this.handleChange} required/>
             <input type="text" value={this.state.auth.PhoneNumber} placeholder="PhoneNumber" onChange={this.handleChange} required/>
          
@@ -104,7 +105,8 @@ class FormSignup extends React.Component {
               <button type="button" id="Back1" onClick={()=>this.handleBack1()}>Back</button>
               <button type="button" id="Next2" onClick={()=>this.handleNext2()}>Next</button>
             </div>
-            <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
+            <icons />
         </form>
 
         
@@ -120,7 +122,8 @@ class FormSignup extends React.Component {
               <button type="button">Submit</button>
               
             </div>
-            <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
+            <icons />
           </form>
         
         <div className="step-row">
@@ -137,4 +140,4 @@ class FormSignup extends React.Component {
   }
 }
 
-export default FormSignup
+export default FormSignupRecruter
