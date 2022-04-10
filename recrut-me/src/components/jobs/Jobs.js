@@ -31,6 +31,7 @@ const Jobs = () => {
   return (
     <JobsContainer id="categories">
         <JobsH1>Featured Jobs </JobsH1>
+        <JobsP style={{textDecorationLine:'underline', color: '#69111E' }}>RECENT JOB</JobsP>
         <JobsWrapper>
             {tab.map(i =>  <JobsCard>
                 <JobsIcon src={i.logo} />
