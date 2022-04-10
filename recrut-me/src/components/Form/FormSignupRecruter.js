@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormSignupRecruter.css"
-import Icons from './icons'
+import Icons from './Icons'
 
 
 class FormSignupRecruter extends React.Component {
@@ -90,7 +90,7 @@ class FormSignupRecruter extends React.Component {
               <button type="button" id="Next1" onClick={()=>this.handleNext1()}>Next</button>
             </div>
             <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
-            
+            <Icons />
         </form>
 
 
@@ -106,7 +106,7 @@ class FormSignupRecruter extends React.Component {
               <button type="button" id="Next2" onClick={()=>this.handleNext2()}>Next</button>
             </div>
             <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
-            <icons />
+            <Icons />
         </form>
 
         
@@ -123,7 +123,7 @@ class FormSignupRecruter extends React.Component {
               
             </div>
             <div className="signupR"><a href="/signin">Do you have an account?signIn</a></div>
-            <icons />
+            <Icons />
           </form>
         
         <div className="step-row">

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormSignUp.css"
-
+import Icons from './Icons'
 
 class FormSignup extends React.Component {
 
@@ -90,6 +90,7 @@ class FormSignup extends React.Component {
               <button type="button" id="Next1" onClick={()=>this.handleNext1()}>Next</button>
             </div>
             <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <Icons />
         </form>
 
 
@@ -105,6 +106,7 @@ class FormSignup extends React.Component {
               <button type="button" id="Next2" onClick={()=>this.handleNext2()}>Next</button>
             </div>
             <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <Icons />
         </form>
 
         
@@ -121,6 +123,7 @@ class FormSignup extends React.Component {
               
             </div>
             <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
+            <Icons />
           </form>
         
         <div className="step-row">

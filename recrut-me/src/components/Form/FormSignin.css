@@ -20,13 +20,37 @@
     overflow:hidden;
 }
 
-h3{
+h3 span{
     text-align:center;
     margin-bottom:20px;
-    color:#27095b;
-    font-family: 'Oswald', sans-serif;
+    color:#791225;
+    font-family: 'Lobster', cursive;
     font-size: 27px;
     margin-top: -20px;
+}
+
+span:before{
+    content:"";
+    display:block;
+    width:90px;
+    height:2px;
+    background:#791225;
+    position:absolute;
+    left:0;
+   
+}
+
+
+
+span:after{
+    content:"";
+    display:block;
+    width:90px;
+    height:2px;
+    background:#791225;
+    position:absolute;
+    right:0;
+   
 }
 
 .formContainer form{

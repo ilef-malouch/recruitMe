@@ -1,0 +1,19 @@
+#icon1{
+    height: 80px;
+    width:30px;
+    margin-right:15px;
+}
+
+#icon2{
+    height: 80px;
+    width:30px;
+    
+}
+
+.icons{
+    position:absolute;
+    margin-left: 36%;
+    display:flex;
+    justify-content: space-between;
+}
+

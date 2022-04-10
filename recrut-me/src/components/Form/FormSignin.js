@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormSignin.css"
-
+import Icons from './Icons'
 
 class FormSignin extends React.Component {
 
@@ -28,7 +28,7 @@ class FormSignin extends React.Component {
       <div className="containerForm">
         <div className="formContainer">
           <form onSubmit={this.handleSubmit} id="Form">
-            <h3>Sign In</h3>
+            <h3><span>Sign In</span></h3>
             
             <input type="email" value={this.state.auth.Email} placeholder="Email" onChange={this.handleChange} required/>
             <input type="password" value={this.state.auth.Password} placeholder="Password" onChange={this.handleChange} required/>
@@ -38,6 +38,7 @@ class FormSignin extends React.Component {
               <button type="button">Submit</button>
             </div>
             <div className="signUp"><a href="/signup">Do you have an account?signUp</a></div>
+            <Icons />
           </form>
         </div>
       </div>
