@@ -36,6 +36,7 @@ const Categories = () => {
   return (
     <CategoriesContainer id="categories">
         <CategoriesH1>Browse Top Categories </CategoriesH1>
+        <CategoriesP style={{textDecorationLine: 'underline'}}>FEATURED TOURS PACKAGES</CategoriesP>
         <CategoriesWrapper>
             {tab.map(i =>  <CategoriesCard>
                 <CategoriesIcon src={i.icon} />

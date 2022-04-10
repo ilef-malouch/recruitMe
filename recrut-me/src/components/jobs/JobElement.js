@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const JobsContainer = styled.div`
-    height: 500px ;
+    
     display: flex ;
     flex-direction: column ;
     justify-content: center ;
     align-items: center ;
-    //background: #010606 ;
+    margin-bottom: 40px ;
 
     @media screen and (max-width: 768px){
         height: 1100px;
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         height: 1300px;
     }
 `
@@ -36,13 +36,11 @@ export const JobsWrapper = styled.div`
 `
 
 export const JobsCard = styled.div`
-    background: #fff ;
-    border: 0.1rem solid #B0C4DE;
     display: flex ;
+    border: 0.1rem solid #11101080;
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    border-radius: 10px ;
     max-height: 150px;
     padding: 70px ;
     transition: all 0.2s ease-in-out ;
@@ -59,32 +57,31 @@ export const JobsCard = styled.div`
 export const JobsIcon = styled.img`
     height: 70px ;
     width:70px ;
-    margin-bottom:10px ;
-    color:#6495ED ;
-
+    margin-bottom:20px ;
 `
 
 export const JobsH1 = styled.h1`
-    font-family: Arial ;
+    font-family: 'Anek Bangla', sans-serif;
     font-size:2.5rem;
     color: #131A79 ;
-    margin-bottom: 64px;
+    margin-bottom: 1px;
+    margin-top:50px ;
 
 @media screen and (max-width:480px){
     font-size: 2rem ;
-    font-family:  	Arial ;
+    font-family: 'Anek Bangla', sans-serif;
 }
 `
 export const JobsH2 = styled.h2`
-font-family:Arial ;
-font-size: 1.3rem;
-margin-bottom: 10px;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
 `
 
 export const JobsP = styled.p`
-font-family:Arial ;
-font-size:1.2rem;
-font-weight: bold ;
-text-align: center;
-color:black ;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size:1.2rem;
+    text-align: center;
+    color:black ;
+    margin-bottom: 50px;
 `

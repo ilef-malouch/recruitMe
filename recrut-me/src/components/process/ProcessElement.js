@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 
 export const ProcessContainer = styled.div`
-    height: 600px ;
+    
     display: flex ;
     flex-direction: column ;
     justify-content: center ;
     align-items: center ;
-    background-image: url('https://www.airswift.com/hubfs/How%20to%20conduct%20an%20effective%20job%20search-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-bottom: 100px ;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 768px){
         height: 1100px;
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 480px){
         height: 1300px;
     }
 `
@@ -38,59 +36,60 @@ export const ProcessWrapper = styled.div`
 `
 
 export const ProcessCard = styled.div`
-background: white ;
-//border: 0.1rem solid black;
-display: flex ;
-flex-direction: column ;
-flex-direction: flex-start ;
-align-items: center ;
-border-radius: 10px ;
-max-height: 340px;
-padding: 50px ;
-box-shadow: 0 1px 3px rgba(0,0,0,0,2) ;
-transition: all 0.2s ease-in-out ;
-box-shadow: 0 2px 3px #00000026 ;
+    border: 0.1rem solid #11101080;
+    display: flex ;
+    flex-direction: column ;
+    flex-direction: flex-start ;
+    align-items: center ;
+    max-height: 340px;
+    padding: 50px ;
+    padding-bottom: 10px;
+    transition: all 0.2s ease-in-out ;
+    box-shadow: 0 2px 3px #00000026 ;
 
-  
-  
 
-&:hover {
-    transform: rotateY(360deg) ;
-    transition: all 1s ease-in-out ;
-    cursor: pointer ;    
-}
+    &:hover {
+        transform: rotateY(360deg) ;
+        transition: all 1s ease-in-out ;
+        cursor: pointer ;    
+    }
 
 `
 
 export const ProcessIcon = styled.img`
-height: 70px ;
-width:70px ;
-margin-bottom:10px ;
-color: black ;
-
+    height: 90px ;
+    width:90px ;
+    margin-bottom:5px ;
+    background-color: #263068 ;
+    border-radius: 50px;
+    border: 0.1rem solid #263068;
 `
 
 export const ProcessH1 = styled.h1`
-font-family: Arial ;
-font-size:2.5rem;
-color: black ;
-margin-bottom: 64px;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size:2.5rem;
+    margin-bottom: 1px;
+    margin-top:50px ;
+    color: #131A79 ;
+    
 
-@media screen and (max-width:480px){
-    font-size: 2rem ;
-    font-family:Arial ;
-}
+    @media screen and (max-width:480px){
+        font-size: 2rem ;
+        font-family: 'Anek Bangla', sans-serif;
+    }
 `
 export const ProcessH2 = styled.h2`
-font-family:Arial ;
-font-size: 1.3rem;
-margin-bottom: 10px;
-color:black;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    margin-top: 30px ;
+    color:#69111E;
 `
 
 export const ProcessP = styled.p`
-font-family:Arial ;
-font-size:1.2rem;
-text-align: center;
-color:black ;
+    margin-bottom: 50px;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size:1.2rem;
+    text-align: center;
+    color:black ;
 `

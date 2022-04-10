@@ -13,15 +13,15 @@ const Tips = () => {
    const tab = [
         {id:1,
         title:"8 infos à ne pas mettre dans son CV ",
-        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.",
+        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.   ",
         image:img1},
         {id:2,
         title:"8 infos à ne pas mettre dans son CV ",
-        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.",
+        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.   ",
         image:img1},
         {id:3,
         title:"8 infos à ne pas mettre dans son CV ",
-        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.",
+        description:"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.   ",
         image:img1},
        
     ]
@@ -29,11 +29,11 @@ const Tips = () => {
     <TipsContainer id="tips">
         <TipsH1>Tips and advices </TipsH1>
         <TipsWrapper>
-            {tab.map(i =>  <TipsCard>
+            {tab.map(i =>  <TipsCard >
                 <TipsH2>{i.title}</TipsH2>
                 <TipsP>
                     {i.description} 
-                    <a href='##'>Lire la suite</a>
+                    <a href='##' style={{color: '#131A79'}}>Lire la suite</a>
                 </TipsP>
             </TipsCard>)}
         </TipsWrapper>
