@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormSignupRecruter.css"
-import Icons from './Icons'
+import Icons from '../Icons/Icons'
 
 
 class FormSignupRecruter extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormSignUp.css"
-import Icons from './Icons'
+import Icons from '../Icons/Icons'
 
 class FormSignup extends React.Component {
 
@@ -78,7 +78,7 @@ class FormSignup extends React.Component {
       <div className="containerForm">
        <div className="formContainer">
         
-        <form id="Form1">
+        <form  id="Form1">
           <h3>Personal Infos</h3>
           
             <input type="text" value={this.state.infos.FamilyName} placeholder="FamilyName" onChange={this.handleChange} required/>

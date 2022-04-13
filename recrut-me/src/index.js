@@ -2,9 +2,9 @@ import React from 'react';
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./components/pages/Home";
-import FormSignup from './components/Form/FormSignup';
-import FormSignin from './components/Form/FormSignin';
-import FormSignupRecruter from './components/Form/FormSignupRecruter';
+import FormSignup from "./components/Form/FormSignUpClient/FormSignup"
+import FormSignin from "./components/Form/FormSignIn/FormSignin"
+import FormSignupRecruter from "./components/Form/FormSignUpRecruter/FormSignupRecruter"
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
