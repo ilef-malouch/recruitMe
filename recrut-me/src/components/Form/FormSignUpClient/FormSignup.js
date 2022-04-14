@@ -4,28 +4,65 @@ import Icons from '../Icons/Icons'
 
 class FormSignup extends React.Component {
 
-  handleChange(event) {
-    const infos={FamilyName:event.target.FamilyName ,FirstName:event.target.FirstName, Domaine:event.target.Domaine}
-    const auth={Email:event.target.Email ,Password:event.target.Password, CofirmedPassword:event.target.CofirmedPassword}
-    const links={Github:event.target.Github ,Linkedin:event.target.Linkedin ,PhoneNumber:event.target.PhoneNumber}
-    
-    this.setState({infos,auth,links});
+  handleChangeFamilyName(event) {
+    this.setState({FamilyName:event.target.value});
+  }
+  
+  handleChangeFirstName(event) {
+    this.setState({FirstName:event.target.value});
+  }
+  
+  handleChangeDomaine(event) {
+    this.setState({Domaine:event.target.value});
+  }
+  
+  handleChangeEmail(event) {
+    this.setState({Email:event.target.value});
+  }
+  
+  handleChangePassword(event) {
+    this.setState({Password:event.target.value});
+  }
+  
+  handleChangeCofirmedPassword(event) {
+    this.setState({CofirmedPassword:event.target.value});
+  }
+  
+  handleChangeGithub(event) {
+    this.setState({Github:event.target.value});
+  }
+  
+  handleChangeLinkedin(event) {
+    this.setState({Linkedin:event.target.value});
+  }
+  
+  handleChangePhoneNumber(event) {
+    this.setState({PhoneNumber:event.target.value});
   }
 
   handleSubmit(event) {
-    alert('Le nom a été soumis : ' + this.state.FamilyName);
+    console.log("hello")
     event.preventDefault();
+    
   }
 
   constructor(props) {
     super(props);
     this.state = 
-                {infos:{FamilyName:"" ,FirstName:"", Domaine:""},
-                auth:{Email:"" ,Password:"", CofirmedPassword:""},
-                links:{Github:"" ,Linkedin:"" ,PhoneNumber:""}
+                {FamilyName:"" ,FirstName:"", Domaine:"",
+                Email:"" ,Password:"", CofirmedPassword:"",
+                Github:"" ,Linkedin:"" ,PhoneNumber:""
                 };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeFamilyName = this.handleChangeFamilyName.bind(this);
+    this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
+    this.handleChangeDomaine = this.handleChangeDomaine.bind(this);
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleChangePassword = this.handleChangePassword.bind(this);
+    this.handleChangeCofirmedPassword = this.handleChangeCofirmedPassword.bind(this);
+    this.handleChangeGithub = this.handleChangeGithub.bind(this);
+    this.handleChangeLinkedin = this.handleChangeLinkedin.bind(this);
+    this.handleChangePhoneNumber = this.handleChangePhoneNumber.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
@@ -81,10 +118,10 @@ class FormSignup extends React.Component {
         <form  id="Form1">
           <h3>Personal Infos</h3>
           
-            <input type="text" value={this.state.infos.FamilyName} placeholder="FamilyName" onChange={this.handleChange} required/>
-            <input type="text"  value={this.state.infos.FirstName} placeholder="FirstName" onChange={this.handleChange} required/>
+            <input type="text" value={this.state.FamilyName} placeholder="FamilyName" onChange={this.handleChangeFamilyName} required/>
+            <input type="text"  value={this.state.FirstName} placeholder="FirstName" onChange={this.handleChangeFirstName} required/>
             <input type="date" placeholder="Date Of Birth" required/>
-            <input type="text" value={this.state.infos.Domaine} placeholder="Domaine" onChange={this.handleChange} required/>
+            <input type="text" value={this.state.Domaine} placeholder="Domaine" onChange={this.handleChangeDomaine} required/>
          
             <div className="btn-box">
               <button type="button" id="Next1" onClick={()=>this.handleNext1()}>Next</button>
@@ -97,9 +134,9 @@ class FormSignup extends React.Component {
         <form id="Form2">
           <h3>Social Links</h3>
             
-            <input type="text" value={this.state.auth.Github} placeholder="Github link" onChange={this.handleChange} required/>
-            <input type="text" value={this.state.auth.Linkedin} placeholder="Linkedin link" onChange={this.handleChange} required/>
-            <input type="text" value={this.state.auth.PhoneNumber} placeholder="PhoneNumber" onChange={this.handleChange} required/>
+            <input type="text" value={this.state.Github} placeholder="Github link" onChange={this.handleChangeGithub} required/>
+            <input type="text" value={this.state.Linkedin} placeholder="Linkedin link" onChange={this.handleChangeLinkedin} required/>
+            <input type="text" value={this.state.PhoneNumber} placeholder="PhoneNumber" onChange={this.handleChangePhoneNumber} required/>
          
             <div className="btn-box">
               <button type="button" id="Back1" onClick={()=>this.handleBack1()}>Back</button>
@@ -113,13 +150,13 @@ class FormSignup extends React.Component {
         <form onSubmit={this.handleSubmit} id="Form3">
           <h3>Create Account</h3>
             
-            <input type="email" value={this.state.auth.Email} placeholder="Email" onChange={this.handleChange} required/>
-            <input type="password" value={this.state.auth.Password} placeholder="Password" onChange={this.handleChange} required/>
-            <input type="password" value={this.state.auth.CofirmedPassword} placeholder="CofirmedPassword" onChange={this.handleChange} required/>
+            <input type="email" value={this.state.Email} placeholder="Email" onChange={this.handleChangeEmail} required/>
+            <input type="password" value={this.state.Password} placeholder="Password" onChange={this.handleChangePassword} required/>
+            <input type="password" value={this.state.CofirmedPassword} placeholder="CofirmedPassword" onChange={this.handleChangeCofirmedPassword} required/>
          
             <div className="btn-box">
               <button type="button" id="Back2" onClick={()=>this.handleBack2()}>Back</button>
-              <button type="button">Submit</button>
+              <button type="submit" value="Envoyer">Submit</button>
               
             </div>
             <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
