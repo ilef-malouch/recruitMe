@@ -23,7 +23,7 @@ export const JobsWrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr ;
     align-items: center ;
     grid-gap: 25px ;
-    padding: 0 50px ;
+    padding-left: 0 50px ;
 
     @media screen and (max-width: 1000px){
         grid-template-columns: 1fr 1fr ;
@@ -41,8 +41,10 @@ export const JobsCard = styled.div`
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    max-height: 150px;
-    padding: 70px ;
+    max-height: 200px;
+    padding-left: 80px ;
+    padding-right:80px ;
+    padding-top:20px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
 
