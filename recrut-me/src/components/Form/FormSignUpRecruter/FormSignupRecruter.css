@@ -7,13 +7,13 @@
 
 .containerForm{
     background-image: url("../images/jobs-background.jpg");
-    height:700px;
+    height:900px;
 }
 .formContainer{
     top:50px;
     width:360px;
-    height:600px;
-    margin:8% auto;
+    height:800px;
+    margin: auto;
     background: rgb(212, 211, 211);
     background: rgba(246, 244, 244, 0.4);
     border-radius:5px ;
@@ -36,7 +36,7 @@ h3{
 .formContainer form{
     width:280px;
     position:absolute;
-    top:100px;
+    top:50px;
     left:40px;
     transition:0.5s;
     

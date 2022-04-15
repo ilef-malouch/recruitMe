@@ -7,13 +7,13 @@
 
 .containerForm{
     background-image: url("../images/jobs-background.jpg");
-    height:700px;
+    height:900px;
 }
 .formContainer{
     top:50px;
     width:360px;
-    height:600px;
-    margin:8% auto;
+    height:800px;
+    margin:  auto;
     background: rgb(212, 211, 211);
     background: rgba(246, 244, 244, 0.4);
     border-radius:5px ;
@@ -22,6 +22,7 @@
    
  
 }
+
 
 h3{
     text-align:center;
@@ -35,7 +36,7 @@ h3{
 .formContainer form{
     width:280px;
     position:absolute;
-    top:100px;
+    top:80px;
     left:40px;
     transition:0.5s;
     
@@ -50,6 +51,56 @@ form input{
     outline:none;
     background:transparent;
 }
+
+p {
+    color:red;
+    font-size: smaller;
+    display:none;
+}
+
+input#input1:invalid[focused="true"] ~ p#pinput1 {
+    display: block;
+}
+
+input#input2:invalid[focused="true"] ~ p#pinput2 {
+    display: block;
+}
+
+input#input3:invalid[focused="true"] ~ p#pinput3 {
+    display: block;
+}
+
+input#input4:invalid[focused="true"] ~ p#pinput4 {
+    display: block;
+}
+
+input#input5:invalid[focused="true"] ~ p#pinput5 {
+    display: block;
+}
+
+input#input6:invalid[focused="true"] ~ p#pinput6 {
+    display: block;
+}
+
+input#input7:invalid[focused="true"] ~ p#pinput7 {
+    display: block;
+}
+
+input#input8:invalid[focused="true"] ~ p#pinput8 {
+    display: block;
+}
+
+input#input9:invalid[focused="true"] ~ p#pinput9 {
+    display: block;
+}
+
+input#input10:invalid[focused="true"] ~ p#pinput10 {
+    display: block;
+}
+
+
+
+
 
 ::placeholder{
     color:rgb(77, 75, 75);
