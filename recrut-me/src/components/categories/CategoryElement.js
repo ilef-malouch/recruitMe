@@ -41,7 +41,9 @@ export const CategoriesCard = styled.div`
     flex-direction: flex-start ;
     align-items: center ;
     max-height: 200px;
-    padding: 80px ;
+    padding-left: 80px ;
+    padding-right: 80px ;
+    padding-top:20px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
 
@@ -57,7 +59,7 @@ export const CategoriesIcon = styled.img`
     height: 70px ;
     width: 70px ;
     margin-bottom:40px ;
-    margin-top: 10px ;
+    margin-top: 1px ;
 `
 
 export const CategoriesH1 = styled.h1`
