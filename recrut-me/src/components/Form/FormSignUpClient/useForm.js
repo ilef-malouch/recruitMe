@@ -1,7 +1,7 @@
 import {useState , useEffect} from "react"
 
-const useForm  =(callback,validate)=>{
-    const [values,setValues]=useState({
+const useForm  =(callback)=>{
+    const [values ,setValues]=useState({
         FamilyName:"" ,
         FirstName:"",
         date:"",
@@ -12,39 +12,24 @@ const useForm  =(callback,validate)=>{
         Github:"" ,
         Linkedin:"" ,
         PhoneNumber:""
-    });
-    
-    const [errors ,setErrors] =useState({});
-    const [isSubmitting,setIsSubmitting]=useState(false);
-    
-    const handleChange = e =>{
-        const {name,value}=e.target;
-        setValues({
-            ...values,
-            [name]:value
-        });
-    };
-    
-    const handleSubmit=(event)=> {
-        event.preventDefault();
+  });
+  
+  const [isSubmitting,setIsSubmitting]=useState(false);
 
-        setErrors(validate(values));
-        setIsSubmitting(true)
-        console.log(values)
-    }
+  const handleChange = e =>{
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
 
-    useEffect(
-        () => {
-          if (Object.keys(errors).length === 0 && isSubmitting) {
-            callback();
-          }
-        },
-        [errors]
-      );
-    
+  const handleSubmit=(event)=> {
+    event.preventDefault();
+    setIsSubmitting(true);
+    callback();
+ 
+  }
+
 
     
-    return {handleChange,handleSubmit,values,errors};
+    return {handleChange,handleSubmit,values};
 }
 
 export default useForm ;
