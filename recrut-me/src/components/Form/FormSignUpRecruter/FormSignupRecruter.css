@@ -10,11 +10,10 @@
     height:700px;
 }
 .formContainer{
-    
     top:50px;
     width:360px;
     height:600px;
-    margin:8% auto;
+    margin: auto;
     background: rgb(212, 211, 211);
     background: rgba(246, 244, 244, 0.4);
     border-radius:5px ;
