@@ -17,7 +17,7 @@ export const TipsContainer = styled.div`
     }
 `
 export const TipsWrapper = styled.div`
-    max-width:1000px;
+    max-width:1500px;
     margin: 0 auto ;
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -41,7 +41,8 @@ export const TipsCard = styled.div`
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    max-height: 300px;
+    height: 250px;
+    width: 300px;
     padding: 30px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
@@ -60,7 +61,7 @@ export const TipsCard = styled.div`
 
 export const TipsH1 = styled.h1`
     font-family: 'Anek Bangla', sans-serif;
-    font-size:2.5rem;
+    font-size:4rem;
     color: #131A79 ;
     margin-bottom: 30px;
     margin-top:50px ;
@@ -73,7 +74,7 @@ export const TipsH1 = styled.h1`
 export const TipsH2 = styled.h2`
     font-family: 'Anek Bangla', sans-serif;
     font-weight: bold ;
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     color:#69111E;
     text-align: center ;
@@ -81,7 +82,7 @@ export const TipsH2 = styled.h2`
 
 export const TipsP = styled.p`
     font-family: 'Anek Bangla', sans-serif;
-    font-size:1.2rem;
+    font-size:2rem;
     text-align: center;
     font-weight: bold;
   color: #000000;

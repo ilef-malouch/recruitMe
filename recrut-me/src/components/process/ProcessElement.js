@@ -17,7 +17,7 @@ export const ProcessContainer = styled.div`
     }
 `
 export const ProcessWrapper = styled.div`
-    max-width:1000px;
+    max-width:1500px;
     margin: 0 auto ;
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -41,7 +41,8 @@ export const ProcessCard = styled.div`
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    max-height: 340px;
+    height: 450px;
+    width:350px ;
     padding: 50px ;
     padding-bottom: 10px;
     transition: all 0.2s ease-in-out ;
@@ -57,9 +58,9 @@ export const ProcessCard = styled.div`
 `
 
 export const ProcessIcon = styled.img`
-    height: 90px ;
-    width:90px ;
-    margin-bottom:5px ;
+    height: 98px ;
+    width:98px ;
+    margin-bottom:20px ;
     background-color: #263068 ;
     border-radius: 50px;
     border: 0.1rem solid #263068;
@@ -67,7 +68,8 @@ export const ProcessIcon = styled.img`
 
 export const ProcessH1 = styled.h1`
     font-family: 'Anek Bangla', sans-serif;
-    font-size:2.5rem;
+    font-size:4rem;
+    font-weight: bold;
     margin-bottom: 1px;
     margin-top:50px ;
     color: #131A79 ;
@@ -80,7 +82,7 @@ export const ProcessH1 = styled.h1`
 `
 export const ProcessH2 = styled.h2`
     font-family: 'Anek Bangla', sans-serif;
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     margin-bottom: 5px;
     margin-top: 30px ;
     color:#69111E;
@@ -89,7 +91,7 @@ export const ProcessH2 = styled.h2`
 export const ProcessP = styled.p`
     margin-bottom: 50px;
     font-family: 'Anek Bangla', sans-serif;
-    font-size:1.2rem;
+    font-size:2rem;
     text-align: center;
     color:black ;
 `
