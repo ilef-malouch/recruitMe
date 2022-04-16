@@ -3,7 +3,7 @@ import FormSignupRecruter from "./FormSignupRecruter";
 import FormSuccess from "./FormSuccess"
 
 
-const FormR =()=>{
+const Form =()=>{
   const [isSubmitted,setIsSubmitted]=useState(false);
   
   function submitForm(){
@@ -20,4 +20,4 @@ const FormR =()=>{
   )
 }
 
-export default FormR ;
+export default Form ;

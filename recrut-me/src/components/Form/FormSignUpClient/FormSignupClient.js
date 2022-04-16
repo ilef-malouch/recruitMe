@@ -108,7 +108,7 @@ return (
                 onSubmit={handleSubmit}
                 onChange={handleForm} 
           >
-          <h3>Personal Infos</h3>
+          <h3 className="formTitle">Personal Infos</h3>
           {inputs1.map((input)=>(
             <FormInput 
                 key={input.id}
@@ -129,7 +129,7 @@ return (
             onSubmit={handleSubmit}
             
         >
-          <h3>Social Links</h3>
+          <h3 className="formTitle">Social Links</h3>
             
           {inputs2.map((input)=>(
             <FormInput
@@ -153,7 +153,7 @@ return (
               onSubmit={handleSubmit}
               onChange={handleFormSubmit} 
               >
-          <h3>Create Account</h3>
+          <h3 className="formTitle">Create Account</h3>
             
           {inputs3.map((input)=>(
             <FormInput 

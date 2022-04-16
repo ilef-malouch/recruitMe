@@ -4,7 +4,7 @@ import "./FormSignin.css"
 import FormSuccess from "./FormSuccess"
 
 
-const FormI =()=>{
+const Form =()=>{
   const [isSubmitted,setIsSubmitted]=useState(false);
   
   function submitForm(){
@@ -21,4 +21,4 @@ const FormI =()=>{
   )
 }
 
-export default FormI ;
+export default Form ;

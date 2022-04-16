@@ -10,7 +10,8 @@ const FormInput =(props)=>{
     };
     return(
         <>
-            <input  
+            <input 
+                className="formInput"  
                 {...inputProps}
                  
                 onChange={onChange} 
@@ -18,7 +19,7 @@ const FormInput =(props)=>{
                 onFocus={()=> 
                     inputProps.name ==="ConfirmPassword" && setFocused(true)} 
                 focused={focused.toString()} />
-            <p id={"p"+inputProps.id}>{errorMessage}</p>
+            <p id={"p"+inputProps.id} className="error">{errorMessage}</p>
         </>
     )
 }

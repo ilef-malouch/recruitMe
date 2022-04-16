@@ -53,7 +53,7 @@ const FormSignin = ({submitForm})=> {
       <div className="containerForm">
         <div className="formContainerSignIn">
           <form onSubmit={handleSubmit} id="FormSignIn" onChange={handleForm} >
-            <h3><span>Sign In</span></h3>
+            <h3 className="formTitle"><span className="ligne">Sign In</span></h3>
             
             {inputs1.map((input)=>(
               <FormInput 
