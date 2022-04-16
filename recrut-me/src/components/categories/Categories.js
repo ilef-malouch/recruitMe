@@ -1,5 +1,10 @@
 import React from 'react'
-import Icon1 from '../../images/categories/coding.png'
+import Icon1 from '../../images/categories/programming.png';
+import Icon2 from '../../images/categories/medical.png';
+import Icon3 from '../../images/categories/business.png';
+import Icon4 from '../../images/categories/banking.png';
+import Icon5 from '../../images/categories/archi.png';
+import Icon6 from '../../images/categories/education.png';
 import {
     CategoriesCard, 
     CategoriesContainer, 
@@ -13,25 +18,29 @@ import {
 const Categories = () => {
    const tab = [
         {id:1,
-        title:"Technology",
+        title:"Developpement",
         offersNumber:120,
         icon:Icon1},
         {id:2,
         title:"Medical",
         offersNumber:"56",
-        icon:Icon1},
+        icon:Icon2},
         {id:3,
+        title:"Business",
+        offersNumber:"120",
+        icon:Icon3},
+        {id:4,
+        title:"Banking",
+        offersNumber:"120",
+        icon:Icon4},
+        {id:5,
+        title:"Architecture",
+        offersNumber:"120",
+        icon:Icon5},
+        {id:6,
         title:"Education",
         offersNumber:"120",
-        icon:Icon1},
-        {id:4,
-        title:"Technology",
-        offersNumber:"120",
-        icon:Icon1},
-        {id:5,
-        title:"Technology",
-        offersNumber:"120",
-        icon:Icon1}
+        icon:Icon6}
     ]
   return (
     <CategoriesContainer id="categories">

@@ -18,10 +18,9 @@ export const CategoriesWrapper = styled.div`
     max-width:1000px;
     margin: 0 auto ;
     display: grid ;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center ;
     grid-gap: 16px ;
-    padding: 0 50px ;
 
     @media screen and (max-width: 1000px){
         grid-template-columns: 1fr 1fr ;
@@ -40,10 +39,11 @@ export const CategoriesCard = styled.div`
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    max-height: 200px;
+    height: 250px;
+    width: 250px;
     padding-left: 80px ;
     padding-right: 80px ;
-    padding-top:20px ;
+    padding-top:30px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
 
@@ -64,7 +64,9 @@ export const CategoriesIcon = styled.img`
 
 export const CategoriesH1 = styled.h1`
     font-family: 'Anek Bangla', sans-serif;
-    font-size:2.5rem;
+    font-size:4rem;
+    font-weight: bold;
+
     margin-bottom: 1px;
     color: #131A79 ;
 
@@ -75,14 +77,14 @@ export const CategoriesH1 = styled.h1`
 `
 export const CategoriesH2 = styled.h2`
     font-family: 'Anek Bangla', sans-serif;
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 `
 
 export const CategoriesP = styled.p`
     margin-bottom: 50px;
     font-family: 'Anek Bangla', sans-serif;
-    font-size:1.2rem;
+    font-size:2rem;
     text-align: center;
     color:#69111E ;
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../images/categories/coding.png'
+import img1 from '../../images/categories/programming.png'
 import {
     TipsCard, 
     TipsContainer, 
