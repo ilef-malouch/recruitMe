@@ -10,7 +10,7 @@
     height:900px;
 }
 .formContainer{
-    top:50px;
+    top:80px;
     width:360px;
     height:800px;
     margin: auto;
@@ -51,6 +51,51 @@ form input{
     outline:none;
     background:transparent;
 }
+
+p {
+    color:red;
+    font-size: smaller;
+    display:none;
+}
+
+input#inputR1:invalid[focused="true"] ~ p#pinputR1 {
+    display: block;
+}
+
+input#inputR2:invalid[focused="true"] ~ p#pinputR2 {
+    display: block;
+}
+
+input#inputR3:invalid[focused="true"] ~ p#pinputR3 {
+    display: block;
+}
+
+input#inputR4:invalid[focused="true"] ~ p#pinputR4 {
+    display: block;
+}
+
+input#inputR5:invalid[focused="true"] ~ p#pinputR5 {
+    display: block;
+}
+
+input#inputR6:invalid[focused="true"] ~ p#pinputR6 {
+    display: block;
+}
+
+input#inputR7:invalid[focused="true"] ~ p#pinputR7 {
+    display: block;
+}
+
+input#inputR8:invalid[focused="true"] ~ p#pinputR8 {
+    display: block;
+}
+
+input#inputR9:invalid[focused="true"] ~ p#pinputR9 {
+    display: block;
+}
+
+
+
 
 ::placeholder{
     color:rgb(77, 75, 75);

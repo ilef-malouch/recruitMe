@@ -1,4 +1,4 @@
-import "./FormSignUpClient.css"
+import "./FormSignin.css"
 import {useState} from "react"
 
 const FormInput =(props)=>{
@@ -12,11 +12,9 @@ const FormInput =(props)=>{
         <>
             <input  
                 {...inputProps}
-                 
+                
                 onChange={onChange} 
-                onBlur={handleFocus}
-                onFocus={()=> 
-                    inputProps.name ==="ConfirmPassword" && setFocused(true)} 
+                onBlur={handleFocus} 
                 focused={focused.toString()} />
             <p id={"p"+inputProps.id}>{errorMessage}</p>
         </>

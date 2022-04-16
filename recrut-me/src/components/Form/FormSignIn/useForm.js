@@ -2,17 +2,9 @@ import {useState} from "react"
 
 const useForm  =(callback)=>{
     const [values ,setValues]=useState({
-        FamilyName:"" ,
-        FirstName:"",
-        date:"",
-        Domaine:"",
         Email:"" ,
-        Password:"",
-        ConfirmedPassword:"",
-        Github:"" ,
-        Linkedin:"" ,
-        PhoneNumber:""
-  });
+        Password:""
+    });
   
   const [isSubmitting,setIsSubmitting]=useState(false);
 
@@ -24,7 +16,6 @@ const useForm  =(callback)=>{
     event.preventDefault();
     setIsSubmitting(true);
     callback();
- 
   }
 
 

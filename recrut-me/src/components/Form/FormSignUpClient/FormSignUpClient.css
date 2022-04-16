@@ -10,7 +10,7 @@
     height:900px;
 }
 .formContainer{
-    top:50px;
+    top:80px;
     width:360px;
     height:800px;
     margin:  auto;
@@ -97,10 +97,6 @@ input#input9:invalid[focused="true"] ~ p#pinput9 {
 input#input10:invalid[focused="true"] ~ p#pinput10 {
     display: block;
 }
-
-
-
-
 
 ::placeholder{
     color:rgb(77, 75, 75);

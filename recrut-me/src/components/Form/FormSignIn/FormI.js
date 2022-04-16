@@ -1,9 +1,10 @@
 import React ,{useState} from "react";
-import FormSignupClient from "./FormSignupClient";
+import FormSignin from "./FormSignin";
+import "./FormSignin.css"
 import FormSuccess from "./FormSuccess"
 
 
-const Form =()=>{
+const FormI =()=>{
   const [isSubmitted,setIsSubmitted]=useState(false);
   
   function submitForm(){
@@ -13,11 +14,11 @@ const Form =()=>{
   return(
     <>
         {!isSubmitted ? 
-        (<FormSignupClient submitForm={submitForm} />):
+        (<FormSignin submitForm={submitForm} />):
         (<FormSuccess/>)
         }
     </>
   )
 }
 
-export default Form ;
+export default FormI ;

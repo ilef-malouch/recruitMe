@@ -1,50 +1,72 @@
 import React from 'react'
 import "./FormSignin.css"
+import useForm from './useForm'
 import Icons from '../Icons/Icons'
+import FormInput from './FormInput'
 
-class FormSignin extends React.Component { 
+const FormSignin = ({submitForm})=> {
 
-  handleChangeEmail(event) {
-    
-    this.setState({Email:event.target.value});
-  }
+  const {handleChange,handleSubmit,values}=useForm(submitForm);
   
-  handleChangePassword(event){
-   
-    this.setState({Password:event.target.value});
-    
-  }
+  const inputs1 =[
+    {
+      id:"inputI1",
+      type:"email",
+      name:"Email" ,
+      placeholder:"Email",
+      errorMessage:"Email address is invalid",
+      required:true,
+    },
+    {
+      id:"inputI2",
+      type:"password",
+      name:"Password",
+      placeholder:"Password",
+      pattern:"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$",
+      errorMessage:"Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character",
+      required:true,
+    }];
   
-  handleSubmit(event) {
-    console.log(this.state);
-    event.preventDefault();
+  const handleForm =()=>{
+    var form = document.querySelector('#FormSignIn'), is_valid = true, fields, button;
+    fields = form.querySelectorAll('input');
+    button = form.querySelector('button');
     
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {Email:"" ,Password:""};
+    for (var i = fields.length - 1; i >= 0; i--) {
+      if(!fields[i].checkValidity() )
+      {
+       is_valid=false
+      }
+     }
+     if (is_valid){
+       button.removeAttribute('disabled');
+      
+ 
+     }else{
+       button.setAttribute('disabled', 'disabled');
+     } 
+   }
+  
     
-   
-    this.handleChangePassword = this.handleChangePassword.bind(this);
-    this.handleChangeEmail = this.handleChangeEmail.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-   
     
-  render() {
-    return (
+   return (
       <div className="containerForm">
         <div className="formContainerSignIn">
-          <form onSubmit={this.handleSubmit} id="Form">
+          <form onSubmit={handleSubmit} id="FormSignIn" onChange={handleForm} >
             <h3><span>Sign In</span></h3>
             
-            <input type="email" value={this.state.Email} placeholder="Email" onChange={this.handleChangeEmail} required/>
-            <input type="password" value={this.state.Password} placeholder="Password" onChange={this.handleChangePassword} required/>
+            {inputs1.map((input)=>(
+              <FormInput 
+                  key={input.id}
+                  {...input} 
+                  value={values[input.name]}
+                  onChange={handleChange}
+              />
+          ))}
            
             
             <div className="btn-box">
-              <button type="submit" value="Envoyer">Submit</button>
+              <button type="submit" value="Envoyer" disabled>Submit</button>
             </div>
             
             
@@ -55,7 +77,7 @@ class FormSignin extends React.Component {
       </div>
       
     );
-  }
+  
 }
 
 export default FormSignin

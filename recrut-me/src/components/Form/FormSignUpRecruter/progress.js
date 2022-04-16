@@ -1,4 +1,4 @@
-export const handleNext1=()=>{
+export const handleNext1=function(){
     var  Form1= document.getElementById("Form1");
     var  Form2= document.getElementById("Form2");
     var progress= document.getElementById("progress");
@@ -9,7 +9,7 @@ export const handleNext1=()=>{
     
  }
 
-export const handleBack1=()=>{
+export const handleBack1=function(){
    var Form1= document.getElementById("Form1");
    var Form2= document.getElementById("Form2");
    var progress= document.getElementById("progress"); 
@@ -19,9 +19,7 @@ export const handleBack1=()=>{
    progress.style.width="120px";
  }
 
-
-
-export const handleNext2=()=>{
+ export const handleNext2=function(){
    var  Form2= document.getElementById("Form2");
    var  Form3= document.getElementById("Form3");
    var progress= document.getElementById("progress");  
@@ -32,7 +30,7 @@ export const handleNext2=()=>{
  }
     
 
-export const handleBack2=()=>{
+export const handleBack2=function(){
    var  Form3= document.getElementById("Form3");
    var  Form2= document.getElementById("Form2");
    var progress= document.getElementById("progress");

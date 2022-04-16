@@ -1,14 +1,15 @@
 import React from 'react'
-import "./FormSignUp.css"
+import "./FormSignUpClient.css"
 import useForm from './useForm'
 import Icons from '../Icons/Icons'
-import {handleNext1,handleBack1,handleNext2,handleBack2} from"./progress"
+import {handleBack1,handleNext2,handleBack2} from"./progress"
+import {handleForm ,handleFormSubmit} from './submitValidation'
 import FormInput from './FormInput'
 
 
 
 
-const FormSignup = ({submitForm})=> {
+const FormSignupClient = ({submitForm})=> {
   
   const {handleChange,handleSubmit,values}=useForm(submitForm);
   
@@ -90,22 +91,23 @@ const FormSignup = ({submitForm})=> {
       required:true,
     },
     {
-      id:"input1",
+      id:"input10",
       type:"password",
       name:"ConfirmedPassword", 
-      placeholder:"ConfirmedPasswor",
+      placeholder:"ConfirmedPassword",
       pattern:values.Password,
       errorMessage:"Passwords do not match",
       required:true,
     }
-      
   ]
-   
-  return (
+return (
       <div className="containerForm">
        <div className="formContainer">
         
-         <form  id="Form1" onSubmit={handleSubmit}>
+         <form  id="Form1"  
+                onSubmit={handleSubmit}
+                onChange={handleForm} 
+          >
           <h3>Personal Infos</h3>
           {inputs1.map((input)=>(
             <FormInput 
@@ -116,7 +118,7 @@ const FormSignup = ({submitForm})=> {
             />
           ))}
           <div className="btn-box">
-            <button type="button" id="Next1" onClick={handleNext1}>Next</button>
+            <button type="button"  id="Next1" disabled>Next</button>
           </div>
           <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
           <Icons />
@@ -124,8 +126,9 @@ const FormSignup = ({submitForm})=> {
 
 
         <form id="Form2"
-              onSubmit={handleSubmit}>
-          
+            onSubmit={handleSubmit}
+            
+        >
           <h3>Social Links</h3>
             
           {inputs2.map((input)=>(
@@ -147,7 +150,9 @@ const FormSignup = ({submitForm})=> {
 
         
         <form id="Form3" 
-              onSubmit={handleSubmit} >
+              onSubmit={handleSubmit}
+              onChange={handleFormSubmit} 
+              >
           <h3>Create Account</h3>
             
           {inputs3.map((input)=>(
@@ -161,7 +166,7 @@ const FormSignup = ({submitForm})=> {
             
             <div className="btn-box">
               <button type="button" id="Back2" onClick={handleBack2}>Back</button>
-              <button type="submit">Submit</button>
+              <button type="submit" id="submit" disabled >Submit</button>
               
             </div>
             <div className="signIn"><a href="/signin">Do you have an account?signIn</a></div>
@@ -182,4 +187,4 @@ const FormSignup = ({submitForm})=> {
   
 }
 
-export default FormSignup
+export default FormSignupClient

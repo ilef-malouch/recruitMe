@@ -3,9 +3,8 @@ import Home from "./components/pages/Home";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Jobs from "./components/jobs/Jobs";
 import Tips from "./components/tips/Tips";
-import FormSignupRecruter from "./components/Form/FormSignUpRecruter/FormSignupRecruter";
-import FormSignin from "./components/Form/FormSignIn/FormSignin";
-import FormSignup from "./components/Form/FormSignUpClient/FormSignup";
+import FormR from "./components/Form/FormSignUpRecruter/FormR";
+import FormI from "./components/Form/FormSignIn/FormI";
 import Form from "./components/Form/FormSignUpClient/Form"
 
 function App() {
@@ -19,8 +18,8 @@ function App() {
                         <Route exact path="/jobs" element={<Jobs />} />
                         <Route exact path="/tips" element={<Tips />} />
                         <Route exact path="/signup" element={<Form />} />
-                        <Route exact path="/signuprecruit" element={<FormSignupRecruter />} />
-                        <Route exact path="/signin" element={<FormSignin />} />
+                        <Route exact path="/signuprecruit" element={<FormR />} />
+                        <Route exact path="/signin" element={<FormI />} />
                     </Routes>
                 </>
             </div>
