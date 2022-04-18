@@ -1,0 +1,80 @@
+
+
+.headerImage{
+    background-image:url("./images/header.jpg");
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    background-position: center center;
+    
+}
+.headerTips{
+    color:#791225;
+    font-family: 'Lobster', cursive;
+    align-items: center;
+    display:flex;
+    justify-content:center;
+
+}
+.columnImage {
+    float: left;
+    width: 50%;
+    height: 500px;
+    
+}
+   
+.image {
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+    position:relative;
+    padding:10px;
+}
+
+
+.columnText {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    height: 300px;
+}
+
+.row:after {
+   
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.titreCol{
+    color:rgb(37, 19, 118);
+    font-size:25px;
+    font-weight: bold;
+    align-items: center;
+    display:flex;
+    padding-left:10px; ;
+    justify-content:center;
+}
+.contenuCol{
+    color:rgb(37, 19, 118);
+    font-size:20px;
+    align-items: center;
+    display:flex;
+    padding-left:10px; ;
+    justify-content:center;
+}
+div.bordure {
+    border-bottom:1px solid rgb(140, 140, 140);
+    padding-top: 5px;
+    
+    }
+.MyList{
+    list-style: square;
+    color:rgb(0, 0, 0);
+    font-size:19px;
+    padding-left:10%;
+    align-items: center;
+    display: list-item;
+    justify-content:center;
+}
