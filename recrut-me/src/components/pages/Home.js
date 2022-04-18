@@ -3,7 +3,7 @@ import Find  from '../find/Find'
 import Categories from '../categories/Categories'
 import Jobs from '../jobs/Jobs'
 import Process from '../process/Process'
-import TipsCategories from '../pages/Tips/TipsCategories'
+import TipsCategories from './Tips/TipsCategories'
 
 const Home = () => {
   return (
