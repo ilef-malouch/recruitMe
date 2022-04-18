@@ -5,7 +5,7 @@ import {
     TipsContainer, 
     TipsH1,
     TipsH2, 
-    TipsP,
+    TipsH6,
     TipsWrapper
 } from './TipsElement'
 
@@ -29,12 +29,12 @@ const Tips = () => {
     <TipsContainer id="tips">
         <TipsH1>Tips and advices </TipsH1>
         <TipsWrapper>
-            {tab.map(i =>  <TipsCard >
+            {tab.map(i =>  <TipsCard key={i.id} >
                 <TipsH2>{i.title}</TipsH2>
-                <TipsP>
+                <TipsH6>
                     {i.description} 
                     <a href='##' style={{color: '#131A79'}}>Lire la suite</a>
-                </TipsP>
+                </TipsH6>
             </TipsCard>)}
         </TipsWrapper>
     </TipsContainer>

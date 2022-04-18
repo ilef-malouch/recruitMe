@@ -9,11 +9,11 @@ export const ProcessContainer = styled.div`
     margin-bottom: 100px ;
 
     @media screen and (max-width: 768px){
-        height: 1100px;
+        height: 1800px;
     }
 
     @media screen and (max-width: 480px){
-        height: 1300px;
+        height: 1800px;
     }
 `
 export const ProcessWrapper = styled.div`
@@ -41,12 +41,14 @@ export const ProcessCard = styled.div`
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
-    height: 450px;
+    height: 470px;
     width:350px ;
     padding: 50px ;
     padding-bottom: 10px;
+    padding-top: 20px;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
+    border-radius: 5px ;
 
 
     &:hover {
@@ -58,12 +60,13 @@ export const ProcessCard = styled.div`
 `
 
 export const ProcessIcon = styled.img`
-    height: 98px ;
-    width:98px ;
-    margin-bottom:20px ;
-    background-color: #263068 ;
-    border-radius: 50px;
-    border: 0.1rem solid #263068;
+    height: 150px ;
+    width:200px ;
+    margin-bottom:5px ;
+    margin-top:5px ;
+    //background-color: #263068 ;
+    //border-radius: 50px;
+    //border: 0.1rem solid #263068;
 `
 
 export const ProcessH1 = styled.h1`
@@ -73,6 +76,7 @@ export const ProcessH1 = styled.h1`
     margin-bottom: 1px;
     margin-top:50px ;
     color: #131A79 ;
+    font-weight: bold;
     
 
     @media screen and (max-width:480px){
@@ -86,12 +90,14 @@ export const ProcessH2 = styled.h2`
     margin-bottom: 5px;
     margin-top: 30px ;
     color:#69111E;
+    font-weight: bold;
 `
 
-export const ProcessP = styled.p`
+export const ProcessH6 = styled.h6`
     margin-bottom: 50px;
     font-family: 'Anek Bangla', sans-serif;
     font-size:2rem;
     text-align: center;
     color:black ;
+    font-weight: bold;
 `

@@ -1,6 +1,7 @@
 import { ClassNames } from "@emotion/react";
 import { Link } from "react-router-dom";
 import classes from './Navbar.module.css';
+import React from "react"
 
 const Navbar = () => {
     return (

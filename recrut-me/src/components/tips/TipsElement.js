@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const TipsContainer = styled.div`
-    
     display: flex ;
     flex-direction: column ;
     justify-content: center ;
@@ -49,7 +48,7 @@ export const TipsCard = styled.div`
     background-image: url("https://images.prismic.io/keljob-fcms/6a4417c8ad49e88050bdc11aac31bef810c435fd_8-infos-a-ne-pas-mettre-dans-son-cv-p.jpg?auto=compress,format");
     background-repeat: no-repeat ;
     background-position: center;
-
+    border-radius: 5px ;
 
     &:hover {
         transform: scale(1.05) ;
@@ -65,6 +64,7 @@ export const TipsH1 = styled.h1`
     color: #131A79 ;
     margin-bottom: 30px;
     margin-top:50px ;
+    font-weight: bold;
 
     @media screen and (max-width:480px){
         font-size: 2rem ;
@@ -78,13 +78,15 @@ export const TipsH2 = styled.h2`
     margin-bottom: 10px;
     color:#69111E;
     text-align: center ;
+    font-weight: bold;
 `
 
-export const TipsP = styled.p`
+export const TipsH6 = styled.h6`
     font-family: 'Anek Bangla', sans-serif;
     font-size:2rem;
     text-align: center;
     font-weight: bold;
-  color: #000000;
+    color: #000000;
+    font-weight: bold;
     
 `

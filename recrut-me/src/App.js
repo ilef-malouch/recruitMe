@@ -5,7 +5,8 @@ import Jobs from "./components/jobs/Jobs";
 import Tips from "./components/tips/Tips";
 import FormRecruter from "./components/Form/FormSignUpRecruter/Form";
 import FormSignIn from "./components/Form/FormSignIn/Form";
-import FormClient from "./components/Form/FormSignUpClient/Form"
+import FormClient from "./components/Form/FormSignUpClient/Form";
+import React from "react"
 
 function App() {
     return (

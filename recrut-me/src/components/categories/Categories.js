@@ -11,7 +11,7 @@ import {
     CategoriesH1,
     CategoriesH2, 
     CategoriesIcon,
-    CategoriesP,
+    CategoriesH6,
     CategoriesWrapper
 } from './CategoryElement'
 
@@ -45,12 +45,12 @@ const Categories = () => {
   return (
     <CategoriesContainer id="categories">
         <CategoriesH1>Browse Top Categories </CategoriesH1>
-        <CategoriesP style={{textDecorationLine: 'underline'}}>FEATURED TOURS PACKAGES</CategoriesP>
+        <CategoriesH6 style={{textDecorationLine: 'underline'}}>FEATURED TOURS PACKAGES</CategoriesH6>
         <CategoriesWrapper>
-            {tab.map(i =>  <CategoriesCard>
+            {tab.map(i =>  <CategoriesCard key={i.id}>
                 <CategoriesIcon src={i.icon} />
                 <CategoriesH2>{i.title}</CategoriesH2>
-                <CategoriesP>{i.offersNumber}</CategoriesP>
+                <CategoriesH6>{i.offersNumber}</CategoriesH6>
             </CategoriesCard>)}
         </CategoriesWrapper>
     </CategoriesContainer>

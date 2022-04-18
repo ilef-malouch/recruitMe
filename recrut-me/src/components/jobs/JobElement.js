@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const JobsContainer = styled.div`
-    
     display: flex ;
     flex-direction: column ;
     justify-content: center ;
@@ -48,6 +47,7 @@ export const JobsCard = styled.div`
     padding-top:20px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
+    border-radius: 5px ;
 
     &:hover {
         transform: scale(1.05) ;
@@ -69,6 +69,7 @@ export const JobsH1 = styled.h1`
     color: #131A79 ;
     margin-bottom: 1px;
     margin-top:50px ;
+    font-weight: bold;
 
 @media screen and (max-width:480px){
     font-size: 2rem ;
@@ -79,12 +80,13 @@ export const JobsH2 = styled.h2`
     font-family: 'Anek Bangla', sans-serif;
     font-size: 2rem;
     margin-bottom: 5px;
+    font-weight: bold;
 `
 
-export const JobsP = styled.p`
+export const JobsH6 = styled.h6`
     font-family: 'Anek Bangla', sans-serif;
     font-size:2rem;
     text-align: center;
     color:black ;
-    margin-bottom: 50px;
+    margin-bottom: 50px;font-weight: bold;
 `
