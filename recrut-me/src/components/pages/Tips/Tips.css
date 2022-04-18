@@ -49,8 +49,16 @@
 
 .titreCol{
     color:rgb(37, 19, 118);
-    font-size:large;
+    font-size:25px;
     font-weight: bold;
+    align-items: center;
+    display:flex;
+    padding-left:10px; ;
+    justify-content:center;
+}
+.contenuCol{
+    color:rgb(37, 19, 118);
+    font-size:20px;
     align-items: center;
     display:flex;
     padding-left:10px; ;
@@ -61,3 +69,12 @@ div.bordure {
     padding-top: 5px;
     
     }
+.MyList{
+    list-style: square;
+    color:rgb(0, 0, 0);
+    font-size:19px;
+    padding-left:10%;
+    align-items: center;
+    display: list-item;
+    justify-content:center;
+}

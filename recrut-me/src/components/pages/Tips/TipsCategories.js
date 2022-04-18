@@ -11,14 +11,14 @@ import {
     CategoriesH1,
     CategoriesH2, 
     CategoriesIcon,
-    CategoriesP,
+
     CategoriesWrapper
 } from "../../categories/CategoryElement"
 
 const TipsCategories = () => {
    const tab = [
         {id:1,
-        title:"cv tricks",
+        title:"cv tips",
         offersNumber:120,
         icon:Icon1,
         },
@@ -28,7 +28,7 @@ const TipsCategories = () => {
         icon:Icon2,
         },
         {id:3,
-        title:"Interview Tricks",
+        title:"Interview Tips",
         offersNumber:"120",
         icon:Icon3,
         },
@@ -41,12 +41,12 @@ const TipsCategories = () => {
   return (
     <CategoriesContainer id="categories">
         <CategoriesH1>Browse Top Tricks </CategoriesH1>
-        <CategoriesP style={{textDecorationLine: 'underline'}}>FEATURED TOURS PACKAGES</CategoriesP>
+       
         <CategoriesWrapper>
             {tab.map(i =>  <CategoriesCard>
                 <CategoriesIcon src={i.icon} />
                 <CategoriesH2 style={{ fontWeight:"bold"}}>{i.title}</CategoriesH2>
-                <CategoriesP>{i.offersNumber}</CategoriesP>
+                
             </CategoriesCard>)}
         </CategoriesWrapper>
     </CategoriesContainer>
