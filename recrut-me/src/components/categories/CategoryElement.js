@@ -6,6 +6,8 @@ export const CategoriesContainer = styled.div`
     justify-content: center ;
     align-items: center ;
     padding: 20px;
+    margin-bottom: 40px ;
+
     @media screen and (max-width: 768px){
         height: 1800px;
     }
@@ -43,6 +45,7 @@ export const CategoriesCard = styled.div`
     padding-left: 80px ;
     padding-right: 80px ;
     padding-top:30px ;
+    margin-top:20px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
     border-radius: 5px ;
@@ -80,6 +83,7 @@ export const CategoriesH2 = styled.h2`
     font-size: 2rem;
     margin-bottom: 5px;
     font-weight: bold;
+    text-align: center ;
 `
 
 export const CategoriesH6 = styled.h6`

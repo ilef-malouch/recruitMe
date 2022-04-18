@@ -6,7 +6,7 @@ export const ProcessContainer = styled.div`
     flex-direction: column ;
     justify-content: center ;
     align-items: center ;
-    margin-bottom: 100px ;
+    margin-bottom: 40px ;
 
     @media screen and (max-width: 768px){
         height: 1800px;

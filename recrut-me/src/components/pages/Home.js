@@ -3,7 +3,7 @@ import Find  from '../find/Find'
 import Categories from '../categories/Categories'
 import Jobs from '../jobs/Jobs'
 import Process from '../process/Process'
-import Tips from '../tips/Tips'
+import TipsCategories from '../pages/Tips/TipsCategories'
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
           <Categories />
           <Process />
           <Jobs />
-          <Tips />
+          <TipsCategories classeName="homeTips" />
       </div>
     
   )

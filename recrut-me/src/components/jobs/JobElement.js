@@ -45,6 +45,7 @@ export const JobsCard = styled.div`
     padding-left: 80px ;
     padding-right:80px ;
     padding-top:20px ;
+    margin-left: 20px;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
     border-radius: 5px ;
