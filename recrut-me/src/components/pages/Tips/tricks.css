@@ -1,0 +1,163 @@
+.headerTips{
+    color:rgb(213, 51, 51);
+    font-family: 'Lobster', cursive;
+    align-items: center;
+    display:flex;
+    justify-content:center;
+
+}
+/*.headerImage{
+    background-image:url("./images/header.jpg");
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    background-position: center center;
+    
+}*/
+section.curveSection {
+    position: relative;
+    display: flex;
+    min-height: 400px;
+   
+    background: #130b7a;
+}
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color:white;
+}
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #130b7a;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+
+.tipsContainer{
+    display:flex;
+    justify-content:center ;
+    flex-wrap: wrap;
+}
+
+.myCard{
+    background:rgb(245, 240, 238) ;
+    width:300px;
+    
+    margin:10px;
+    border-radius:15px;
+}
+.myCard:hover{
+    background-color: rgb(205, 203, 203);
+    color:rgb(26, 8, 52);
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.card-image{
+    border-radius:15px 15PX 0 0;
+    height:200px;
+    margin-bottom:15px;
+    background-size:cover;
+}
+
+.cv-1{
+    background-image: url("./images/cv1.jpg");
+}
+.cv-2{
+    background-image: url("./images/cv2.jpg");
+}
+.cv-3{
+    background-image: url("./images/cv3.jpg");
+}
+.cv-4{
+    background-image: url("./images/cv4.jpg");
+}
+
+.card-paragraph{
+    font-size: 18px;
+    text-justify: auto;
+    padding-left: 5px;
+    font-family: 'Akshar', sans-serif;
+    
+}
+
+.card-h2{
+    color:rgb(213, 51, 51);
+    font-weight: bold;
+    text-align:center;
+    font-size: 19px;
+}
+
+.interview-1{
+    background-image: url("./images/interview1.jpg");
+}
+.interview-2{
+    background-image: url("./images/interview2.jpg");
+}
+.interview-3{
+    background-image: url("./images/interview3.jpg");
+}
+.interview-4{
+    background-image: url("./images/interview4.png");
+}
+.network-1{
+    background-image: url("./images/network1.jpg");
+}
+.network-2{
+    background-image: url("./images/network2.jpg");
+}
+.network-3{
+    background-image: url("./images/network3.jpg");
+}
+.network-4{
+    background-image: url("./images/network4.jpg");
+}
+.h1-cards{
+    color:rgb(16, 9, 101);
+    font-weight: bold;
+    text-align:center;
+    font-size: 25px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-family: 'Akshar', sans-serif;
+}
+.title-h3{
+    font-family: 'Lobster', cursive;
+    color:white;
+    padding-left:50px;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.paragraph-h51{
+    font-family: 'Righteous', cursive;
+    color:white;
+    padding-left:350px;
+    padding-top: 80px;
+    font-size: 30px;
+}
+.author{
+    padding-left:200px;
+    font-size: 20px;
+}
+

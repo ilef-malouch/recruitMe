@@ -13,6 +13,7 @@
     "bootstrap-icons": "^1.8.1",
     "formik": "^2.2.9",
     "formik-material-ui": "^4.0.0-alpha.2",
+    "mdb-react-ui-kit": "^3.0.0",
     "react": "^18.0.0",
     "react-bootstrap": "^2.2.3",
     "react-dom": "^18.0.0",

@@ -21,7 +21,7 @@
     overflow:hidden;
 }
 
-p{
+p.error{
     color:red;
     font-size: smaller;
     display:none;
