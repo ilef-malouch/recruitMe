@@ -1,0 +1,59 @@
+.container-find{
+   
+    display: flex ;
+    height: auto;
+    width: auto;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    margin-bottom: 40px ;
+   
+    @media screen and (max-width: 768px){
+        height: 1800px;
+    }
+
+    @media screen and (max-width: 480px){
+        height: 1800px;
+    }
+}
+
+.wrapper-find{
+    max-width:1500px;
+    margin: 0 auto ;
+    display: grid ;
+    grid-template-columns: 1fr 1fr  ;
+    align-items: center ;
+    grid-gap: 25px ;
+   /* padding: 0 50px ;*/
+
+    @media screen and (max-width: 1000px){
+        grid-template-columns: 1fr  ;
+    }
+
+    @media screen and (max-width: 760px){
+        grid-template-columns: 1fr ;
+        
+    }
+}
+
+.image{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.descrip{
+    font-family: 'Anek Bangla', sans-serif;
+    font-size:5rem;
+    font-weight: bold ;
+    color: #131A79 ;
+    margin-bottom: 30px;
+    margin-top:120px ;
+    margin-left: 50px;
+
+    @media screen and (max-width:480px){
+        font-size: 2rem ;
+        font-family: 'Anek Bangla', sans-serif;
+    }
+}
+
+

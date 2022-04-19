@@ -6,12 +6,14 @@ export const CategoriesContainer = styled.div`
     justify-content: center ;
     align-items: center ;
     padding: 20px;
+    margin-bottom: 40px ;
+
     @media screen and (max-width: 768px){
-        height: 1100px;
+        height: 1800px;
     }
 
     @media screen and (max-width: 480px){
-        height: 1300px;
+        height: 1800px;
     }
 `
 export const CategoriesWrapper = styled.div`
@@ -20,7 +22,7 @@ export const CategoriesWrapper = styled.div`
     display: grid ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center ;
-    grid-gap: 16px ;
+    grid-gap: 16px;
 
     @media screen and (max-width: 1000px){
         grid-template-columns: 1fr 1fr ;
@@ -33,7 +35,6 @@ export const CategoriesWrapper = styled.div`
 `
 
 export const CategoriesCard = styled.div`
-
     border: 0.1rem solid #11101080;
     display: flex ;
     flex-direction: column ;
@@ -44,8 +45,10 @@ export const CategoriesCard = styled.div`
     padding-left: 80px ;
     padding-right: 80px ;
     padding-top:30px ;
+    margin-top:20px ;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
+    border-radius: 5px ;
 
     &:hover {
         transform: rotateY(360deg) ;
@@ -79,12 +82,15 @@ export const CategoriesH2 = styled.h2`
     font-family: 'Anek Bangla', sans-serif;
     font-size: 2rem;
     margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center ;
 `
 
-export const CategoriesP = styled.p`
+export const CategoriesH6 = styled.h6`
     margin-bottom: 50px;
     font-family: 'Anek Bangla', sans-serif;
     font-size:2rem;
     text-align: center;
     color:#69111E ;
+    font-weight: bold;
 `

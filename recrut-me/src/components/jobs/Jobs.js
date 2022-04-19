@@ -6,7 +6,7 @@ import {
     JobsH1,
     JobsH2, 
     JobsIcon,
-    JobsP,
+    JobsH6,
     JobsWrapper
 } from './JobElement'
 
@@ -31,12 +31,12 @@ const Jobs = () => {
   return (
     <JobsContainer id="categories">
         <JobsH1>Featured Jobs </JobsH1>
-        <JobsP style={{textDecorationLine:'underline', color: '#69111E' }}>RECENT JOB</JobsP>
+        <JobsH6 style={{textDecorationLine:'underline', color: '#69111E' }}>RECENT JOB</JobsH6>
         <JobsWrapper>
-            {tab.map(i =>  <JobsCard>
+            {tab.map(i =>  <JobsCard key={i.id}>
                 <JobsIcon src={i.logo} />
                 <JobsH2>{i.title}</JobsH2>
-                <JobsP>{i.name} , {i.place}</JobsP>
+                <JobsH6>{i.name} , {i.place}</JobsH6>
                 
             </JobsCard>)}
         </JobsWrapper>
