@@ -1,17 +1,20 @@
 import {useState} from "react"
+import axios from "axios"
 
 const useForm  =(callback)=>{
     const [values ,setValues]=useState({
         FamilyName:"" ,
         FirstName:"",
-        date:"",
+        Birthday:"",
         Domaine:"",
+        GithubLink:"" ,
+        LinkedinLink:"" ,
+        PhoneNumber:"",
         Email:"" ,
         Password:"",
-        ConfirmedPassword:"",
-        Github:"" ,
-        Linkedin:"" ,
-        PhoneNumber:""
+        ConfirmPassword:"",
+        Type:"Client"
+        
   });
   
   const [isSubmitting,setIsSubmitting]=useState(false);
@@ -19,11 +22,29 @@ const useForm  =(callback)=>{
   const handleChange = e =>{
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+  
+
+  const submitForm=()=>{
+    fetch('http://localhost:3000/authclient/signup',values)
+    .then((result)  => {
+     
+      console.log(result);
+      localStorage.setItem("token",result.token)
+    }) ;
+  }
 
   const handleSubmit=(event)=> {
     event.preventDefault();
     setIsSubmitting(true);
     callback();
+    axios.post("http://localhost:3000/authclient/signup",values)
+    .then(response=>{
+      console.log(response)
+      localStorage.setItem("token",response.data.token)
+    })
+    .catch(error =>{
+      console.log(error)
+    })
  
   }
 

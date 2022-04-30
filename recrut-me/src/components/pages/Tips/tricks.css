@@ -16,11 +16,13 @@
     
 }*/
 section.curveSection {
-    position: relative;
-    display: flex;
-    min-height: 400px;
-   
-    background: #130b7a;
+    
+    background-image: url("./images/back.jpg");
+    height: 500px;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    
+
 }
 .curve {
     position: absolute;
@@ -46,7 +48,7 @@ section.curveSection {
     border-radius: 100% 50%;
     width: 55%;
     height: 100%;
-    background-color: #130b7a;
+    background-color: #28a755;
     transform: translate(-4%, 40%);
     z-index: -1;
 }
@@ -102,7 +104,7 @@ section.curveSection {
 }
 
 .card-h2{
-    color:rgb(213, 51, 51);
+    color:rgb(15, 103, 44);
     font-weight: bold;
     text-align:center;
     font-size: 19px;
@@ -133,7 +135,7 @@ section.curveSection {
     background-image: url("./images/network4.jpg");
 }
 .h1-cards{
-    color:rgb(16, 9, 101);
+    color:#7D7D82;
     font-weight: bold;
     text-align:center;
     font-size: 25px;

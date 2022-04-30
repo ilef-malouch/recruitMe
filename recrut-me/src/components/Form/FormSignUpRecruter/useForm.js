@@ -1,17 +1,18 @@
 import {useState} from "react"
+import axios from "axios";
 
 const useForm  =(callback)=>{
   const [values ,setValues]=useState({
         CompagnyName:"" ,
-        idCompagny:"",
+        IdCompagny:"",
         Domaine:"",
         FacebookLink:"",
         Linkedin:"",
         PhoneNumber:"" ,
         Email:"",
         Password:"",
-        ConfirmedPassword:"" ,
-        
+        ConfirmPassword:"" ,
+        Type:"Recruter"
   });
 
   const [isSubmitting,setIsSubmitting]=useState(false);
@@ -24,6 +25,16 @@ const useForm  =(callback)=>{
     event.preventDefault();
     setIsSubmitting(true);
     callback();
+    axios.post("http://localhost:3000/authrecruter/signup",values)
+    .then(response=>{
+      console.log(response)
+      console.log(response.data.token)
+      localStorage.setItem("token",response.data.token)
+    })
+    .catch(error =>{
+      console.log(error)
+    })
+ 
   }
   return {handleChange,handleSubmit,values};
 }

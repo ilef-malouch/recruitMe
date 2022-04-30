@@ -6,9 +6,6 @@ import {handleBack1,handleNext2,handleBack2} from"./progress"
 import {handleForm ,handleFormSubmit} from './submitValidation'
 import FormInput from './FormInput'
 
-
-
-
 const FormSignupClient = ({submitForm})=> {
   
   const {handleChange,handleSubmit,values}=useForm(submitForm);
@@ -34,8 +31,8 @@ const FormSignupClient = ({submitForm})=> {
     },
     {
       id:"input3",
-      type:"date",
-      name:"date",
+      type:"Birthday",
+      name:"Birthday",
       placeholder:"Date Of Birth",
       errorMessage:"Birthday is required",
       required:true,
@@ -93,8 +90,8 @@ const FormSignupClient = ({submitForm})=> {
     {
       id:"input10",
       type:"password",
-      name:"ConfirmedPassword", 
-      placeholder:"ConfirmedPassword",
+      name:"ConfirmPassword", 
+      placeholder:"ConfirmPassword",
       pattern:values.Password,
       errorMessage:"Passwords do not match",
       required:true,
