@@ -23,8 +23,8 @@ const FormSignupRecruter =({submitForm})=>{
     {
       id:"inputR2",
       type:"text",
-      name:"idCompagny", 
-      placeholder:"idCompagny",
+      name:"IdCompagny", 
+      placeholder:"IdCompagny",
       errorMessage:"idCompagny required",
       required:true ,
     },
@@ -86,7 +86,8 @@ const FormSignupRecruter =({submitForm})=>{
     {
       id:"inputR9",
       type:"password", 
-      placeholder:"CofirmedPassword",
+      name:"ConfirmPassword", 
+      placeholder:"ConfirmPassword",
       pattern:values.Password,
       errorMessage:"Passwords do not match",
       required:true,

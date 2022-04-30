@@ -1,5 +1,5 @@
 import {useState} from "react"
-import React from "react"
+import axios from "axios";
 
 const useForm  =(callback)=>{
     const [values ,setValues]=useState({
@@ -17,6 +17,15 @@ const useForm  =(callback)=>{
     event.preventDefault();
     setIsSubmitting(true);
     callback();
+    axios.post("http://localhost:3000/authclient/signin",values)
+    .then(response=>{
+      console.log(response)
+      console.log(values)
+      localStorage.setItem("token",response.data.token)
+    })
+    .catch(error =>{
+      console.log(error)
+    })
   }
 
 

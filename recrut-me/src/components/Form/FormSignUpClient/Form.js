@@ -14,7 +14,7 @@ const Form =()=>{
     <>
         {!isSubmitted ? 
         (<FormSignupClient submitForm={submitForm} />):
-        (<FormSuccess/>)
+        (alert("We have received your request !"))
         }
     </>
   )

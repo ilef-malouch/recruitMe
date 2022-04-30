@@ -6,7 +6,7 @@
 }
 
 .containerForm{
-    background-image: url("../images/jobs-background.jpg");
+   /* background-image: url("../images/jobs-background.jpg");*/
     height:900px;
 }
 .formContainer{
@@ -174,9 +174,9 @@ small{
 
 
 
-.signupR a#a{
+.signupR a{
     position:relative;
-    color:rgb(73, 72, 74);
+    color:rgb(109, 109, 109);
     font-size:small;
     left: 50px;
     top:-15px;

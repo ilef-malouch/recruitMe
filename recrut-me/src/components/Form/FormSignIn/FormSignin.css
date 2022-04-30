@@ -5,7 +5,7 @@
 }
 
 .containerForm{
-    background-image: url("../images/jobs-background.jpg");
+   
     height:900px;
 }
 
@@ -39,7 +39,7 @@ input#inputI2:invalid[focused="true"] ~ p#pinputI2 {
 h3.formTitle{
     text-align:center;
     margin-bottom:40px;
-    color:#791225;
+    color:#28a755;
     font-family: 'Lobster', cursive;
     font-size: 27px;
 }
@@ -48,7 +48,7 @@ h3.formTitle{
 h3.formTitle span.ligne{
     text-align:center;
     margin-bottom:20px;
-    color:#791225;
+    color:#5a5b5a;
     font-family: 'Lobster', cursive;
     font-size: 27px;
     margin-top: -20px;
@@ -59,7 +59,7 @@ span.ligne:before{
     display:block;
     width:90px;
     height:2px;
-    background:#791225;
+    background:#5a5b5a;
     position:absolute;
     left:0;
    
@@ -70,7 +70,7 @@ span.ligne:after{
     display:block;
     width:90px;
     height:2px;
-    background:#791225;
+    background:#5a5b5a;
     position:absolute;
     right:0;
    
