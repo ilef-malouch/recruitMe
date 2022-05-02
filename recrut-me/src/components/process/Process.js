@@ -1,22 +1,20 @@
 import React from 'react'
-import Icon1 from '../../images/process/1.jpg';
-import Icon2 from '../../images/process/2.jpg';
-import Icon3 from '../../images/process/3.jpg';
-import {
-    ProcessCard, 
+import Icon1 from '../../images/process/firmbee-com-gcsNOsPEXfs-unsplash.jpg';
+import Icon2 from '../../images/process/kobu-agency-7okkFhxrxNw-unsplash.jpg';
+import Icon3 from '../../images/process/alexander-mils-lCPhGxs7pww-unsplash.jpg';
+import { 
     ProcessContainer, 
     ProcessH1,
-    ProcessH2, 
-    ProcessIcon,
     ProcessH6,
     ProcessWrapper
 } from './ProcessElement'
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 
 const Process = () => {
    const tab = [
         {id:1,
         title:"1. Search a job",
-        description:"When you're searching for jobs, use advanced search options to find jobs by using keywords that match your interests, the type of job you're looking for, and the location where you want to work.",
+        description:"When you're searching for jobs, use advanced search options to find jobs by using keywords that match your interests and the type of job you're looking for.",
         icon:Icon1},
         {id:2,
         title:"2. Apply for a job",
@@ -29,15 +27,20 @@ const Process = () => {
        
     ]
   return (
-    <ProcessContainer id="process">
+    <ProcessContainer id="process" style={{backroungImage:"url('https://i.stack.imgur.com/pvXgA.png)"}}>
         <ProcessH1>How it works </ProcessH1>
-        <ProcessH6 style={{textDecorationLine:'underline', color: '#69111E'}}>APPLY PROCESS</ProcessH6>
+        <ProcessH6 style={{textDecorationLine:'underline', color: '#28a755'}}>APPLY PROCESS</ProcessH6>
         <ProcessWrapper>
-            {tab.map(i =>  <ProcessCard key={i.id}>
-                <ProcessIcon src={i.icon} />
-                <ProcessH2>{i.title}</ProcessH2>
-                <ProcessH6>{i.description}</ProcessH6>
-            </ProcessCard>)}
+            {tab.map(i =>   
+            <MDBCard style={{ maxWidth: '22rem' }}>
+                <MDBCardImage src={i.icon} position='top' alt='...' />
+                <MDBCardBody>
+                    <MDBCardTitle style={{color:'#28a755'}}>{i.title}</MDBCardTitle>
+                    <MDBCardText>
+                    {i.description}
+                    </MDBCardText>
+                </MDBCardBody>
+            </MDBCard>)}
         </ProcessWrapper>
     </ProcessContainer>
   )
