@@ -9,6 +9,7 @@ import FormClient from "./components/Form/FormSignUpClient/Form";
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from "./components/navbar/NavbarComp";
+import Footer from "./components/footer/Footer";
 function App() {
     return (
         <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
                         <Route exact path="/tips" element={<Tips />} />
                     </Routes>
                 </>
+                <Footer/>
             </div>
         </BrowserRouter>
     );

@@ -1,10 +1,10 @@
 import React from 'react'
-import Icon1 from '../../images/categories/programming.png';
-import Icon2 from '../../images/categories/medical.png';
-import Icon3 from '../../images/categories/business.png';
-import Icon4 from '../../images/categories/banking.png';
-import Icon5 from '../../images/categories/archi.png';
-import Icon6 from '../../images/categories/education.png';
+import Icon1 from '../../images/categories/icons1.png';
+import Icon2 from '../../images/categories/icons2.png';
+import Icon3 from '../../images/categories/icons3.png';
+import Icon4 from '../../images/categories/icons4.png';
+import Icon5 from '../../images/categories/icons5.png';
+import Icon6 from '../../images/categories/icons6.png';
 import {
     CategoriesCard, 
     CategoriesContainer, 
@@ -22,23 +22,23 @@ const Categories = () => {
         offersNumber:120,
         icon:Icon1},
         {id:2,
-        title:"Medical",
+        title:"Santé",
         offersNumber:"56",
         icon:Icon2},
         {id:3,
-        title:"Business",
+        title:"Design, Art & Multimedia",
         offersNumber:"120",
         icon:Icon3},
         {id:4,
-        title:"Banking",
+        title:"Comptabilité / Finance",
         offersNumber:"120",
         icon:Icon4},
         {id:5,
-        title:"Architecture",
+        title:"Construction / Installation",
         offersNumber:"120",
         icon:Icon5},
         {id:6,
-        title:"Education",
+        title:"Restauration / Services d'allimentation",
         offersNumber:"120",
         icon:Icon6}
     ]
