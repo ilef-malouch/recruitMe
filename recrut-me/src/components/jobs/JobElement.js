@@ -36,15 +36,15 @@ export const JobsWrapper = styled.div`
 
 export const JobsCard = styled.div`
     display: flex ;
-    border: 0.1rem solid #11101080;
+    border: 0.1rem solid #80808045;
     flex-direction: column ;
     flex-direction: flex-start ;
     align-items: center ;
     height: 250px;
     width:300px ;
-    padding-left: 80px ;
-    padding-right:80px ;
-    padding-top:20px ;
+    padding-left: 60px ;
+    padding-right:60px ;
+    padding-top:30px ;
     margin-left: 20px;
     transition: all 0.2s ease-in-out ;
     box-shadow: 0 2px 3px #00000026 ;
@@ -65,29 +65,30 @@ export const JobsIcon = styled.img`
 `
 
 export const JobsH1 = styled.h1`
-    font-family: 'Anek Bangla', sans-serif;
-    font-size:4rem;
-    color: #131A79 ;
+    font-family: sans-serif;
+    font-size:3rem;
+    color: '#474748' ;
     margin-bottom: 1px;
     margin-top:50px ;
-    font-weight: bold;
 
 @media screen and (max-width:480px){
-    font-size: 2rem ;
-    font-family: 'Anek Bangla', sans-serif;
+    font-size: 1.5rem ;
+    font-family: sans-serif;
 }
 `
 export const JobsH2 = styled.h2`
-    font-family: 'Anek Bangla', sans-serif;
-    font-size: 2rem;
+    font-family: sans-serif;
+    font-size: 1.2rem;
     margin-bottom: 5px;
     font-weight: bold;
+    text-align: center;
 `
 
 export const JobsH6 = styled.h6`
-    font-family: 'Anek Bangla', sans-serif;
-    font-size:2rem;
+    font-family: sans-serif;
+    font-size:1.25rem;
     text-align: center;
     color:black ;
-    margin-bottom: 50px;font-weight: bold;
+    margin-bottom: 50px;
+    
 `

@@ -5,6 +5,7 @@ import Jobs from '../jobs/Jobs'
 import Process from '../process/Process'
 import TipsCategories from './Tips/TipsCategories'
 
+
 const Home = () => {
   return (
       <div>
@@ -13,6 +14,7 @@ const Home = () => {
           <Process />
           <Jobs />
           <TipsCategories classeName="homeTips" />
+          
       </div>
     
   )
