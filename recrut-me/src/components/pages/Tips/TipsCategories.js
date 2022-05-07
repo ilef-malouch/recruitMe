@@ -40,7 +40,7 @@ const TipsCategories = () => {
     ]
   return (
     <CategoriesContainer id="categories">
-        <CategoriesH1><h1 style={{color:'#474748'}}>Browse Top Tricks</h1> </CategoriesH1>
+        <CategoriesH1><h1 style={{color:'#474748',fontFamily: 'Fjalla One'}}>Browse Top Tricks</h1> </CategoriesH1>
        
         <CategoriesWrapper>
             {tab.map(i =>  <CategoriesCard>

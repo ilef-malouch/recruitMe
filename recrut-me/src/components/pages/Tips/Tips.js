@@ -11,16 +11,19 @@ const Tips = () => {
       <div className="Tips">
          <section className="curveSection"></section>
           <TipsCategories />
+          <hr style={{width:"100%",textAlign:"left",marginLeft:"0"}}/>
           <div>
-            <h1 className="h1-cards"><img src={require('./icons/etoiles.png')} style={{marginRight:"20px"}} />Simple But Effective Ways to Make Your CV Stand Out<img src={require('./icons/etoiles.png')} style={{marginLeft:"20px"}} /></h1>  
+            <h1 className="h1-cards">Simple But Effective Ways to Make Your CV Stand Out</h1>  
             <Cv />
+            <hr style={{width:"100%",textAlign:"left",marginLeft:"0"}}/>
           </div>
           <div>
-            <h1 className="h1-cards"><img src={require('./icons/etoiles.png')} style={{marginRight:"20px"}} />The importance of networking for career development<img src={require('./icons/etoiles.png')} style={{marginLeft:"20px"}} /></h1>  
+            <h1 className="h1-cards">The importance of networking for career development</h1>  
           <Interview />
+          <hr style={{width:"100%",textAlign:"left",marginLeft:"0"}}/>
           </div>
           <div>
-            <h1 className="h1-cards"><img src={require('./icons/etoiles.png')} style={{marginRight:"20px"}} />Importance of improving your Network<img src={require('./icons/etoiles.png')} style={{marginLeft:"20px"}} /></h1>  
+            <h1 className="h1-cards">Importance of improving your Network</h1>  
           <Networking />
           </div>
       </div>

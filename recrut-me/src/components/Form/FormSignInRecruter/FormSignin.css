@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding:0 ;
+    font-family:sans-serif;
+}
+
+.containerForm{
+   
+    height:900px;
+}
+
+.formContainerSignIn{
+    top:80px;
+    width:360px;
+    height:600px;
+    margin:auto;
+    background: rgb(212, 211, 211);
+    background: rgba(246, 244, 244, 0.4);
+    border-radius:5px ;
+    position:relative;
+    overflow:hidden;
+}
+
+p.error{
+    color:red;
+    font-size: smaller;
+    display:none;
+}
+
+input#inputI1:invalid[focused="true"] ~ p#pinputI1 {
+    display: block;
+}
+
+input#inputI2:invalid[focused="true"] ~ p#pinputI2 {
+    display: block;
+}
+
+
+h3.formTitle{
+    text-align:center;
+    margin-bottom:40px;
+    color:#28a755;
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+}
+
+
+h3.formTitle span.ligne{
+    text-align:center;
+    margin-bottom:20px;
+    color:#5a5b5a;
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+    margin-top: -20px;
+}
+
+span.ligne:before{
+    content:"";
+    display:block;
+    width:90px;
+    height:2px;
+    background:#5a5b5a;
+    position:absolute;
+    left:0;
+   
+}
+
+span.ligne:after{
+    content:"";
+    display:block;
+    width:90px;
+    height:2px;
+    background:#5a5b5a;
+    position:absolute;
+    right:0;
+   
+}
+
+#FormSignIn{
+    width: 280px;
+    position:absolute;
+    top:100px;
+    left:40px;
+    transition:0.5s;
+    
+}
+
+form input{
+    width: 100%;
+    padding:10px 5px;
+    margin:5px 0;
+    border:0;
+    border-bottom:1px solid #999;
+    outline:none;
+    background:transparent;
+}
+
+::placeholder{
+    color:rgb(77, 75, 75);
+}
+
+
+
+
+.signup a{
+    position:relative;
+    color:rgb(76, 75, 78);
+    font-size:small;
+    left: 50px;
+    top:-15px;
+    
+}

@@ -2,8 +2,28 @@ import { ClassNames } from "@emotion/react";
 import { Link } from "react-router-dom";
 import './Navbar.module.css';
 import React from "react";
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { Navbar, Container, NavDropdown, Nav } from 'react-bootstrap';
+
 const NavbarComp = () => {
+  
+  const isAuth=()=>{
+    if (localStorage.getItem("token")) return true
+    else return false ;
+  }
+
+  const signout=()=>{
+    localStorage.removeItem("token");
+    localStorage.removeItem("sign");
+    window.location.reload();
+    Navigate("/")
+  }
+  const sign=(event)=>{
+    localStorage.setItem("sign",event.target.innerText)
+  }
+
+
   return (
     <>
       <style type="text/css">
@@ -44,12 +64,27 @@ const NavbarComp = () => {
               <Nav.Link href="#deets">More deets</Nav.Link>
             </Nav>
             <Nav>
-              <NavDropdown  title="connexion" id="collasible-nav-dropdown">
-                <NavDropdown.Item as={Link} to={"/signup-client"}>Sign up Client</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to={"/signup-recruter"}>Sign up Recruter</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to={"/signin"}>Sign in</NavDropdown.Item> 
-              </NavDropdown>
+              {isAuth() ? (
+                <Nav className="me-auto text-primary" variant="custom" >
+                  {(localStorage.getItem("sign")==="SignIn Client")||(localStorage.getItem("sign")==="Sign up Client")?
+                    (<Nav.Link as={Link} to={"/client-profile"}>Profile</Nav.Link>):
+               
+                    (<Nav.Link as={Link} to={"/recruter-profile"}>Profile</Nav.Link>)
+                  }
+                    <Nav.Link as={Link} to={"/"} onClick={signout}>LogOut</Nav.Link>
+                </Nav>
+                 
+              ):(
+                <NavDropdown  title="connexion" id="collasible-nav-dropdown">
+                  <NavDropdown.Item as={Link} to={"/signup-client"} onClick={(e)=>sign(e)}>Sign up Client</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/signup-recruter"} onClick={(e)=>sign(e)}>Sign up Recruter</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item as={Link} to={"/signin-recruter"} id="recruter" onClick={(e)=>sign(e)}>SignIn Recruter</NavDropdown.Item> 
+                  <NavDropdown.Item as={Link} to={"/signin-client"} id="client" onClick={(e)=>sign(e)}>SignIn Client</NavDropdown.Item>   
+                </NavDropdown>
+              )
+             }
+             
               
             </Nav>
           </Navbar.Collapse>

@@ -94,17 +94,36 @@ section.curveSection {
 .cv-4{
     background-image: url("./images/cv4.jpg");
 }
-
+span.ligneN:before{
+    content:"";
+    display:block;
+    width:100px;
+    height:1px;
+    background:#5a5b5a;
+    position:absolute;
+    left:340px;
+   
+}
+span.ligneN:after{
+    content:"";
+    display:block;
+    width:100px;
+    height:1px;
+    background:#5a5b5a;
+    position:absolute;
+    right: 340px;;
+   
+}
 .card-paragraph{
-    font-size: 18px;
+    font-size: 15px;
     text-justify: auto;
     padding-left: 5px;
-    font-family: 'Akshar', sans-serif;
+    font-family: Arial, sans-serif;
     
 }
 
 .card-h2{
-    color:rgb(15, 103, 44);
+    color:rgb(27, 16, 92);
     font-weight: bold;
     text-align:center;
     font-size: 19px;
@@ -135,13 +154,14 @@ section.curveSection {
     background-image: url("./images/network4.jpg");
 }
 .h1-cards{
-    color:#7D7D82;
+    color:#333232;
     font-weight: bold;
     text-align:center;
-    font-size: 25px;
+    font-size: 30px;
     padding-bottom: 50px;
     padding-top: 50px;
-    font-family: 'Akshar', sans-serif;
+    font-family:'Fjalla One', sans-serif;
+    
 }
 .title-h3{
     font-family: 'Lobster', cursive;
@@ -152,7 +172,7 @@ section.curveSection {
 }
 
 .paragraph-h51{
-    font-family: 'Righteous', cursive;
+    font-family: Arial, cursive;
     color:white;
     padding-left:350px;
     padding-top: 80px;
