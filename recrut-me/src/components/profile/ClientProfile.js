@@ -20,7 +20,7 @@ export default function ClientProfile() {
     const token = localStorage.getItem("token");
     console.log("couocu");
     axios
-      .get("http://localhost:3000/authclient/clientInfo/" + token)
+      .get("http://localhost:8000/authclient/clientInfo/" + token)
       .then((result) => {
         console.log(result.data.cv);
         if (result.data.image === undefined) {
@@ -60,7 +60,7 @@ export default function ClientProfile() {
     fd.append("file", file, file.name);
     console.log("phooto");
     axios
-      .post("http://localhost:3000/authclient/picture/" + token, fd)
+      .post("http://localhost:8000/authclient/picture/" + token, fd)
       .then((result) => {
         client.image = result.data.image;
       });
@@ -73,7 +73,7 @@ export default function ClientProfile() {
     fd.append("file", file, file.name);
     console.log("phooto");
     axios
-      .post("http://localhost:3000/authclient/cv/" + token, fd)
+      .post("http://localhost:8000/authclient/cv/" + token, fd)
       .then((result) => {
         client.cv = result.data.cv;
       });
