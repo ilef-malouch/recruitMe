@@ -19,17 +19,17 @@ export default function Footer() {
             <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
               <h6 style={{color:'#28a755'}} className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
-                <a href='http://localhost:3000/' className='text-reset'>
+                <a href='http://localhost:8000/recrutme/' className='text-reset'>
                   Home
                 </a>
               </p>
               <p>
-                <a href='http://localhost:3000/tips' className='text-reset'>
+                <a href='http://localhost:8000/recrutme/tips' className='text-reset'>
                  Tips
                 </a>
               </p>
               <p>
-                <a href='http://localhost:3000/jobs' className='text-reset'>
+                <a href='http://localhost:8000/recrutme/jobs' className='text-reset'>
                   Jobs
                 </a>
               </p>

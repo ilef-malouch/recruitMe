@@ -18,7 +18,7 @@ export default function RecruterProfile() {
     const token = localStorage.getItem("token");
     console.log("couocu");
     axios
-      .get("http://localhost:3000/authrecruter/recruterInfo/" + token)
+      .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
         console.log("11");
         console.log(result);
@@ -54,7 +54,7 @@ export default function RecruterProfile() {
     fd.append("file", file, file.name);
 
     axios
-      .post("http://localhost:3000/authrecruter/picture/" + token, fd)
+      .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
       .then((result) => {
         recruter.image = result.data.image;
       });

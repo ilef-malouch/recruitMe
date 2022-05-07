@@ -1,4 +1,3 @@
-import Navbar from "./components/navbar/NavbarComp";
 import Home from "./components/pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Jobs from "./components/jobs/Jobs";
@@ -9,7 +8,6 @@ import FormSignInRecruter from "./components/Form/FormSignInRecruter/Form";
 import FormClient from "./components/Form/FormSignUpClient/Form";
 import React from "react";
 import NavbarComp from "./components/navbar/NavbarComp";
-<<<<<<< HEAD
 import ClientProfile from "./components/profile/ClientProfile";
 import RecruterProfile from "./components/profile/RecruterProfile";
 
@@ -42,28 +40,6 @@ function App() {
       </div>
     </BrowserRouter>
   );
-=======
-import Footer from "./components/footer/Footer";
-function App() {
-    return (
-        <BrowserRouter>
-            <div className="App" >
-                <NavbarComp />
-                < >
-                    <Routes>
-                        <Route exact path="/" element={<Home />} />
-                        <Route exact path="/jobs" element={<Jobs />} />
-                        <Route exact path="/signup-client" element={<FormClient />} />
-                        <Route exact path="/signup-recruter" element={<FormRecruter />} />
-                        <Route exact path="/signin" element={<FormSignIn />} />
-                        <Route exact path="/tips" element={<Tips />} />
-                    </Routes>
-                </>
-                <Footer/>
-            </div>
-        </BrowserRouter>
-    );
->>>>>>> 75f3167a5a5690da56fcaba4ee395e8c6317abae
 }
 
 export default App;
