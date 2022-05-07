@@ -3,17 +3,8 @@ import axios from "axios";
 
 const useForm = (callback) => {
   const [values, setValues] = useState({
-    FamilyName: "",
-    FirstName: "",
-    Birthday: "",
-    Domaine: "",
-    GithubLink: "",
-    LinkedinLink: "",
-    PhoneNumber: "",
     Email: "",
     Password: "",
-    ConfirmPassword: "",
-    Type: "Client",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,21 +13,15 @@ const useForm = (callback) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const submitForm = () => {
-    fetch("http://localhost:3000/authclient/signup", values).then((result) => {
-      console.log(result);
-      localStorage.setItem("token", result.token);
-    });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsSubmitting(true);
     callback();
     axios
-      .post("http://localhost:3000/authclient/signup", values)
+      .post("http://localhost:3000/authrecruter/signin", values)
       .then((response) => {
         console.log(response);
+        console.log(values);
         localStorage.setItem("token", response.data.token);
         window.location.reload();
       })

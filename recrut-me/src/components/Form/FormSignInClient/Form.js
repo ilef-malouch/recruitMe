@@ -1,8 +1,8 @@
 import React ,{useState} from "react";
-import FormSignupRecruter from "./FormSignupRecruter";
+import FormSignin from "./FormSignin";
+import "./FormSignin.css"
 import FormSuccess from "./FormSuccess"
 import { Navigate } from "react-router-dom";
-
 
 const Form =()=>{
   const [isSubmitted,setIsSubmitted]=useState(false);
@@ -18,7 +18,7 @@ const Form =()=>{
   return(
     <>
         {!isSubmitted ? 
-        (<FormSignupRecruter submitForm={submitForm} />):
+        (<FormSignin submitForm={submitForm} />):
         (<Navigate to="/" />)
         }
     </>

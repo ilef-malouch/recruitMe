@@ -1,7 +1,7 @@
 import React ,{useState} from "react";
 import FormSignupClient from "./FormSignupClient";
 import FormSuccess from "./FormSuccess"
-
+import { Navigate } from "react-router-dom";
 
 const Form =()=>{
   const [isSubmitted,setIsSubmitted]=useState(false);
@@ -9,12 +9,15 @@ const Form =()=>{
   function submitForm(){
     setIsSubmitted(true);
   }
+  function reloadPage(){ 
+    window.location.reload(); 
+}
 
   return(
     <>
         {!isSubmitted ? 
         (<FormSignupClient submitForm={submitForm} />):
-        (alert("We have received your request !"))
+        (<Navigate to="/" />)
         }
     </>
   )
