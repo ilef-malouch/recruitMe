@@ -1,6 +1,5 @@
 import React ,{useState} from "react";
-import FormSignupClient from "./FormSignupClient";
-import FormSuccess from "./FormSuccess"
+import FormSignupClient from "./FormSignupClient"; 
 import { Navigate } from "react-router-dom";
 
 const Form =()=>{

@@ -1,4 +1,3 @@
-import Navbar from "./components/navbar/NavbarComp";
 import Home from "./components/pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Jobs from "./components/jobs/Jobs";

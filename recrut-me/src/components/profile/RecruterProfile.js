@@ -18,7 +18,7 @@ export default function RecruterProfile() {
     const token = localStorage.getItem("token");
     console.log("couocu");
     axios
-      .get("http://localhost:8000/authrecruter/recruterInfo/" + token)
+      .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
         console.log("11");
         console.log(result);
@@ -54,7 +54,7 @@ export default function RecruterProfile() {
     fd.append("file", file, file.name);
 
     axios
-      .post("http://localhost:8000/authrecruter/picture/" + token, fd)
+      .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
       .then((result) => {
         recruter.image = result.data.image;
       });
@@ -83,7 +83,7 @@ export default function RecruterProfile() {
                           alt="profile"
                         />
                         <span className="profile-name">
-                          {recruter.compagnyName} 
+                          {recruter.compagnyName}
                         </span>
                       </div>
                       <div className="d-none d-md-block">
@@ -214,7 +214,7 @@ export default function RecruterProfile() {
                       <label className="tx-11 mb-0">LinkedInLink :</label>
                       <p className="text-muted">{recruter.linkedinLink}</p>
                     </div>
-                    
+
                     <div className="mt-3">
                       <label className="tx-11 font-weight-bold mb-0 text-uppercase">
                         Email:

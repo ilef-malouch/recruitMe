@@ -34,7 +34,7 @@ const useForm = (callback) => {
     setIsSubmitting(true);
     callback();
     axios
-      .post("http://localhost:8000/authclient/signup", values)
+      .post("http://localhost:8000/recrutme/authclient/signup", values)
       .then((response) => {
         console.log(response);
         localStorage.setItem("token", response.data.token);
