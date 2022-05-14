@@ -1,0 +1,19 @@
+
+section.curvejobSection {
+    
+    background-image: url("https://th.bing.com/th/id/R.ae0f94390a8c18d7d13a670eac7d6047?rik=tPaSk1WhfMn0xw&riu=http%3a%2f%2fwww.uc.pt%2ffctuc%2fdquimica%2frbritolab%2frepository%2fwork&ehk=RKKMXbBSBlLz%2fQcg0ZEJ9J5qmuz9LtQMvOVYBMoR6bU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1?height=300px");
+    height: 500px;  
+    background-repeat:no-repeat ;
+    background-size: cover;
+    
+
+}
+div{
+    align-items: center;
+}
+.title{
+    align-self: center;
+    margin-top: 7rem;
+    margin-left: 33rem;
+    color: #15740b;
+}

@@ -10,36 +10,40 @@ import React from "react";
 import NavbarComp from "./components/navbar/NavbarComp";
 import ClientProfile from "./components/profile/ClientProfile";
 import RecruterProfile from "./components/profile/RecruterProfile";
+import  Footer  from "./components/footer/Footer";
+import AddJobOffer from "./components/jobs/AddJobOffer";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <NavbarComp />
-        <>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/jobs" element={<Jobs />} />
-            <Route exact path="/signup-client" element={<FormClient />} />
-            <Route exact path="/signup-recruter" element={<FormRecruter />} />
-            <Route exact path="/signin-client" element={<FormSignInClient />} />
-            <Route
-              exact
-              path="/signin-recruter"
-              element={<FormSignInRecruter />}
-            />
-            <Route exact path="/tips" element={<Tips />} />
-            <Route exact path="/client-profile" element={<ClientProfile />} />
-            <Route
-              exact
-              path="/recruter-profile"
-              element={<RecruterProfile />}
-            />
-          </Routes>
-        </>
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <NavbarComp />
+                <>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/jobs" element={<Jobs />} />
+                        <Route exact path="/signup-client" element={<FormClient />} />
+                        <Route exact path="/signup-recruter" element={<FormRecruter />} />
+                        <Route exact path="/signin-client" element={<FormSignInClient />} />
+                        <Route exact path="/addoffer" element={<AddJobOffer />} />
+                        <Route
+                            exact
+                            path="/signin-recruter"
+                            element={<FormSignInRecruter />}
+                        />
+                        <Route exact path="/tips" element={<Tips />} />
+                        <Route exact path="/client-profile" element={<ClientProfile />} />
+                        <Route
+                            exact
+                            path="/recruter-profile"
+                            element={<RecruterProfile />}
+                        />
+                    </Routes>
+                </>
+                <Footer />
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
