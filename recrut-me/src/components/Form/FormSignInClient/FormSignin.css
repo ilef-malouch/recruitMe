@@ -14,8 +14,8 @@
     width:360px;
     height:600px;
     margin:auto;
-    background: rgb(212, 211, 211);
-    background: rgba(246, 244, 244, 0.4);
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255);
     border-radius:5px ;
     position:relative;
     overflow:hidden;
@@ -39,7 +39,8 @@ input#inputI2:invalid[focused="true"] ~ p#pinputI2 {
 h3.formTitle{
     text-align:center;
     margin-bottom:40px;
-    color:#28a755;
+    color:
+#ad0e88;
     font-family: 'Lobster', cursive;
     font-size: 27px;
 }

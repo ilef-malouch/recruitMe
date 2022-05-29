@@ -51,14 +51,14 @@ const FormSignupClient = ({submitForm})=> {
       {
         id:"input5",
         type:"text" ,
-        name:"Github",
+        name:"GithubLink",
         placeholder:"Github link" 
       },
   
      {
         id:"input6",
         type:"text",
-        name:"Linkedin" ,
+        name:"LinkedinLink" ,
         placeholder:"Linkedin link" 
      } ,
      {
