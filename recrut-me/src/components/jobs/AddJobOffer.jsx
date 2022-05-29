@@ -19,10 +19,16 @@ export default function AddJobOffer() {
             competences: details.competences,
             description: details.description
         }
-        axios.post('http://localhost:8000/recrutme/jobs/add-job', registred)
+        const token = localStorage.getItem('token');
+       
+        axios.post('http://localhost:8000/recrutme/jobs/add-job', registred,{
+            headers: ({
+                Authorization: 'Bearer ' + token
+            })
+        })
             .then(res => {
                 console.log(registred);
-                // window.location.assign('/')
+                // window.location.assign('/jobs')
             })
             .catch(err => {
                 console.log(err.response);

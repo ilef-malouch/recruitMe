@@ -62,7 +62,7 @@ export default function RecruterProfile() {
 
   useEffect(() => {
     getProfile();
-  });
+  },[]);
 
   return (
     <div className="maincontainer">
