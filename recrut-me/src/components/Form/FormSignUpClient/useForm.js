@@ -23,7 +23,7 @@ const useForm = (callback) => {
   };
 
   const submitForm = () => {
-    fetch("http://localhost:8000/authclient/signup", values).then((result) => {
+    fetch("http://localhost:8000/recrutme/authclient/signup", values).then((result) => {
       console.log(result);
       localStorage.setItem("token", result.token);
     });

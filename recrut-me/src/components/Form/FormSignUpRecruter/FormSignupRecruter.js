@@ -46,21 +46,21 @@ const FormSignupRecruter =({submitForm})=>{
       type:"text",
       name:"FacebookLink",
       placeholder:"Facebook link", 
-      required:true,
+      
     },
     {
       id:"inputR5",
       type:"text", 
-      name:"Linkedin",
+      name:"LinkedinLink",
       placeholder:"Linkedin link", 
-      required:true,
+      
     },
     {
       id:"inputR6",
       type:"text" ,
       name:"PhoneNumber",
       placeholder:"PhoneNumber", 
-      required:true,
+      
     }
     
   ]

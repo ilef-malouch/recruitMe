@@ -29,7 +29,8 @@ const NavbarComp = () => {
       <style type="text/css">
         {`
     .bg-custom   { 
-      background-color: #28a755 ; 
+      background-color: 
+      #ad0e88 ; 
     } 
     .navbar-custom .navbar-brand ,
     .navbar-custom .navbar-toggler,

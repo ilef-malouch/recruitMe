@@ -1,29 +1,30 @@
-import React from 'react';
+import React from "react";
+import { MDBCol, MDBIcon } from "mdbreact";
+import "./Search.css";
 
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('Le nom a été soumis : ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-         <input type="text" placeholder='Enter your keyword' value={this.state.value} onChange={this.handleChange} />
-         <button type="submit">Search</button>
-      </form>
+      <MDBCol md="6">
+        <div className="input-group md-form form-sm form-1 pl-0">
+          <div className="input-group-prepend">
+            <span
+              className="input-group-text lighten-3"
+              style={{ backgroundColor: "#ad0e88" }}
+              id="basic-text1"
+            >
+              <MDBIcon className="text-white" icon="search" />
+            </span>
+          </div>
+          <input
+            className="form-control my-0 py-1"
+            type="text"
+            placeholder="Find the best job for you ...."
+            aria-label="Search"
+            style={{ backgroundColor: "#eee" }}
+          />
+        </div>
+      </MDBCol>
     );
   }
 }
