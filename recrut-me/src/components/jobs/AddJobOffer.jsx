@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Button from "@material-ui/core/Button";
 import React, { useState } from 'react';
 import './job.css';
 
@@ -28,7 +29,7 @@ export default function AddJobOffer() {
         })
             .then(res => {
                 console.log(registred);
-                // window.location.assign('/jobs')
+                window.location.assign('/jobs')
             })
             .catch(err => {
                 console.log(err.response);
@@ -53,7 +54,7 @@ export default function AddJobOffer() {
                     <input type="text" class="form-control" id="secteur" onChange={e => setDetails({ ...details, secteur: e.target.value })} value={details.secteur} />
                 </div>
                 <div class="row  ">
-                    <div class="col">
+                    <div class="col mb-3">
                         <label for="language" class="form-label">Language</label>
                         <input class="form-control" list="languageOptions" id="language" placeholder="Type preferred language.." onChange={e => setDetails({ ...details, langue: e.target.value })} value={details.langue} />
                         <datalist id="languageOptions">
@@ -62,13 +63,13 @@ export default function AddJobOffer() {
                             <option value="German" />
                         </datalist>
                     </div>
-                    <div class="col mb-3">
+                    <div class="col mb-3 ">
                         <label for="dateExpiration" class="form-label">Date of Offer Expiration</label>
                         <input type="date" class="form-control" id="dateExpiration" onChange={e => setDetails({ ...details, dateExpiration: e.target.value })} value={details.dateExpiration} />
                     </div>
 
                 </div>
-                <div class="col-md mb-3">
+                <div class="col  mb-3">
                     <select class="form-select" id="floatingSelectGrid" aria-label="Type of " onChange={e => setDetails({ ...details, typeContrat: e.target.value })} value={details.typeContrat}>
                         <option selected>select the type of contract</option>
                         <option value="1">Full Time contract</option>
@@ -92,7 +93,13 @@ export default function AddJobOffer() {
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" id="description" rows="3" onChange={e => setDetails({ ...details, description: e.target.value })} value={details.description}></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit Offer </button>
+                {/* <button type="submit" class="btn btn-primary">Submit Offer </button> */}
+                <div style={{alignItems:true}} container alignItems="center" justify="center" direction="column">
+
+                <Button variant="contained" color="primary" type="submit">
+                    Submit  
+                </Button>
+                </div>
             </form>
         </div>
     );
