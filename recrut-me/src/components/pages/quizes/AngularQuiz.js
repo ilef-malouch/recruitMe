@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from '../../../images/quiz/angular.png';
-import {MDBRadio, MDBBtn} from "mdb-react-ui-kit";
+import {MDBRadio, MDBCard} from "mdb-react-ui-kit";
 
 const AngularQuiz = () => {
     return (
@@ -24,55 +24,63 @@ const AngularQuiz = () => {
                     <p style={{ color: "black", fontSize: "18px" }}>
                     With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. Angular is designed to make updating as straightforward as possible, so take advantage of the latest developments with a minimum of effort. Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.
                     </p>
-                    <p>  </p>
-                    <div style={{marginLeft: "5%"}}>
-                    <h4>AngularJs is based on _______?</h4>
-                    <div>
-                        <MDBRadio name='aa' id='q1' label='dsds' />
+                    <br/><br/>
+                    <div style={{marginLeft: "15%"}}>
+                    <MDBCard className='w-75' style={{padding:20}}>
+                            
+                            <h4 >AngularJs is based on _______?</h4>
+                            <div>
+                            <MDBRadio name='aa' id='q1' label='dsds' />
                         <MDBRadio name='aa' id='q2' label='dsqd'  />
-                        <MDBRadio name='aa' id='q3' label='dsqdsqd'  />
-
-                    </div>
-                    <p>  </p>
-                    <p>  </p>
-                    <h4>What is the correct way to apply multiple filters in AngularJs?</h4>
-                    <div>
-                        <MDBRadio name='bb' id='q1' label='{{ expression | filter1 | filter2 | … }}' />
+                        <MDBRadio name='aa' id='q3' label='dsqdsqd'  />  
+                            </div>
+                        </MDBCard>
+                            <br/> <br/>
+                        <MDBCard className='w-75' style={{padding:20}}>
+                            
+                            <h4 >What is the correct way to apply multiple filters in AngularJs?</h4>
+                            <div>
+                            <MDBRadio name='bb' id='q1' label='{{ expression | filter1 | filter2 | … }}' />
                         <MDBRadio name='bb' id='q2' label='{{ expression | {filter1} | {filter2} | … }}' />
                         <MDBRadio name='bb' id='q3' label='{{ expression – {filter1} – {filter2} – … }}' />
                         <MDBRadio name='bb' id='q4' label='{{ {filter1} | {filter2} | … – expression}}' />
-                    </div>
-                    <p>  </p>
-                    <p>  </p>
-                    <h4>AngularJS is entirely based on HTML and JavaScript?</h4>
-                    <div>
-                        <MDBRadio name='cc' id='q1' label='True' />
+                            </div>
+                        </MDBCard>
+                        <br/> <br/>
+                        <MDBCard className='w-75' style={{padding:20}}>
+                            
+                            <h4 >AngularJS is entirely based on HTML and JavaScript?</h4>
+                            <div>
+                            <MDBRadio name='cc' id='q1' label='True' />
                         <MDBRadio name='cc' id='q2' label='False' />
-                    </div>
-                    <p>  </p>
-                    <p>  </p>
-                    <h4>
-What is the correct way to apply multiple filters in AngularJs?</h4>
-                    <div>
-                        <MDBRadio name='dd' id='q1' label='{{ expression | filter1 | filter2 | … }}' />
+                            </div>
+                        </MDBCard>
+                        <br/> <br/>
+                        <MDBCard className='w-75' style={{padding:20}}>
+                            
+                            <h4 >What is the correct way to apply multiple filters in AngularJs?</h4>
+                            <div>
+                            <MDBRadio name='dd' id='q1' label='{{ expression | filter1 | filter2 | … }}' />
                         <MDBRadio name='dd' id='q2' label='{{ expression | {filter1} | {filter2} | … }}' />
                         <MDBRadio name='dd' id='q3' label='{{ expression – {filter1} – {filter2} – … }}' />
                         <MDBRadio name='dd' id='q3' label='{{ {filter1} | {filter2} | … – expression}}' />
-                    </div>
-                    <p>  </p>
-                    <p>  </p>
-                    <h4>AngularJs is based on _______?</h4>
-                    <div>
-                        <MDBRadio name='ee' id='q1' label='MVC Architecture' />
+                            </div>
+                        </MDBCard>
+                        <br/> <br/>
+                        <MDBCard className='w-75' style={{padding:20}}>
+                            
+                            <h4>AngularJs is based on _______?</h4>
+                            <div>
+                            <MDBRadio name='ee' id='q1' label='MVC Architecture' />
                         <MDBRadio name='ee' id='q2' label='MVVM Architecture' />
                         <MDBRadio name='ee' id='q3' label='Pattern Decorator' />
-                        <MDBRadio name='ee' id='q4' label='Pattern Observer' />
-                    </div>
+                        <MDBRadio name='ee' id='q4' label='Pattern Observer' /> 
+                            </div>
+                        </MDBCard>
+                    <br/>
                     <br/>
                     
-                    <MDBBtn size='lg' href='#' active  outline rounded className='mx-2' color='success'>
-                        Submit
-                    </MDBBtn>  
+                    <a style={{marginLeft:"30%"}} href='#' class="btn btn-success btn-md active" role="button" aria-pressed="true">Submit</a>
                     </div>
                     
                 </div>

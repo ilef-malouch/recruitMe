@@ -18,9 +18,7 @@ const Quiz = (props) => {
                         {props.details}
                     </span>
                     <br/>
-                    <MDBBtn size='sm' href={props.link} active  outline rounded className='mx-2' color='success'>
-                        Quiz
-                    </MDBBtn>                
+                    <a href={props.link} class="btn btn-success btn-sm active" role="button" aria-pressed="true">Quiz</a>
                 </div>
             </div>
         
