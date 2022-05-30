@@ -1,7 +1,25 @@
 import React from "react";
 import "./Jobs.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-const Jobs = () => {
+function Jobs() {
+  const [allJobs, setallJobs] = useState([]);
+
+  const getAllJobs = () => {
+    axios.get("http://localhost:8000/recrutme/jobs").then((result) => {
+     
+      setallJobs(result.data);
+    });
+   
+  };
+
+  React.useEffect(() => {
+    
+    getAllJobs();
+    
+  },[]);
+
   return (
     <div className="container" style={{ marginTop: "100px" }}>
       <div>
@@ -97,23 +115,27 @@ const Jobs = () => {
                   <div className="table-responsive">
                     <table className="table table-hover">
                       <tbody>
-                        <tr>
-                          <td className="number text-center">1</td>
-                          <td className="image">
-                            <img
-                              src="https://via.placeholder.com/400x300/FF8C00"
-                              alt=""
-                            />
-                          </td>
-                          <td className="product">
-                            <strong>Product 1</strong>
-                            <br />
-                            This is the product description.
-                          </td>
-                          
-                          
-                        </tr>
+                        {allJobs ? (
+                          allJobs.map((job) => (
+                            <tr>
+                              <td className="image">
+                                <img
+                                  src="https://via.placeholder.com/400x300/FF8C00"
+                                  alt=""
+                                />
+                              </td>
+                              <td className="product">
+                                <strong>{job.secteur}</strong>
+                                <br />
+                                {job.description}
+                              </td>
+                            </tr>
+                          ))
+                        ) : (
+                          <p>Not loaded yet</p>
+                        )}
                       </tbody>
+                      <div className="padding"></div>
                     </table>
                   </div>
                 </div>
@@ -124,6 +146,6 @@ const Jobs = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Jobs;
