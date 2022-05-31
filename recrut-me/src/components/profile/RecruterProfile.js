@@ -2,6 +2,8 @@ import axios from "axios";
 import React from "react";
 import "./clientProfile.css";
 import { useState, useEffect } from "react";
+import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+
 
 export default function RecruterProfile() {
   const [recruter, setRecruter] = useState({
@@ -186,8 +188,14 @@ export default function RecruterProfile() {
                   <i className="mdi mdi-cards-variant mr-1"></i>
                   Projects
                 </h5>
-                <div className="table-responsive">
-                  <div className="row"></div>
+                <div>
+                    <MDBCard>
+                      <MDBCardBody>
+                        <MDBCardTitle>Special title treatment</MDBCardTitle>
+                        <MDBCardText>With supporting text below as a natural lead-in to additional content.</MDBCardText>
+                        <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{backgroundColor:"#ad0e88",color:"white"}} role="button" aria-pressed="true">Voir candidature</a>
+                      </MDBCardBody>
+                    </MDBCard>
                 </div>
               </div>
             </div>

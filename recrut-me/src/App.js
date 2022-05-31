@@ -23,6 +23,7 @@ import SuccessReact from "./components/pages/quizes/SuccessReact";
 import SuccessAngular from "./components/pages/quizes/SuccessAngular";
 import SuccessSpringboot from "./components/pages/quizes/SuccessSpringboot";
 import SuccessPython from "./components/pages/quizes/SuccessPython";
+import Candidatures from "./components/profile/Candidatures";
 
 function App() {
     return (
@@ -63,6 +64,7 @@ function App() {
                         <Route exact path="/quizes/python" element={<PythonQuiz />} />
                         <Route exact path="/quizes/python/success" element={<SuccessPython />} />
                         <Route exact path="/quizes/python/fail" element={< Fail />} />
+                        <Route exact path="/candidatures" element={< Candidatures />} />
                     </Routes>
                 </>
                 <Footer />
