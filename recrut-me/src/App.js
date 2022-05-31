@@ -12,7 +12,12 @@ import ClientProfile from "./components/profile/ClientProfile";
 import RecruterProfile from "./components/profile/RecruterProfile";
 import Footer from "./components/footer/Footer";
 import AddJobOffer from "./components/jobs/AddJobOffer";
-import JobDetails from "./components/jobs/jobDetails";
+import JobDetails from "./components/jobs/JobDetails";
+import Quizes from "./components/pages/quizes/Quizes";
+import ReactQuiz from "./components/pages/quizes/ReactQuiz";
+import AngularQuiz from "./components/pages/quizes/AngularQuiz";
+import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz";
+import PythonQuiz from "./components/pages/quizes/PythonQuiz";
 
 function App() {
   return (
