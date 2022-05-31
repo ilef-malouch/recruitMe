@@ -2,8 +2,73 @@ import React from 'react';
 import Img from '../../../images/quiz/react.png';
 import {MDBRadio, MDBBtn} from "mdb-react-ui-kit";
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdb-react-ui-kit';
+import { useState } from 'react';
 
 const ReactQuiz = () => {
+
+    var count=0;
+    var mark1=0;
+    var mark2=0;
+    var mark3=0;
+    var mark4=0;
+    var mark5=0;
+
+    const onClick1True = () => {
+        mark1=1;
+        console.log(mark1);
+    }
+    const onClick1False= () => {
+        mark1=0;
+        console.log(mark1)
+    }
+    const onClick2True = () => {
+        mark2=1;
+        console.log(mark2)
+    }
+    const onClick2False= () => {
+        mark2=0;
+    }
+    const onClick3True = () => {
+        mark3=1;
+        console.log(mark3)
+    }
+    const onClick3False= () => {
+        mark3=0;
+
+    }
+    const onClick4True = () => {
+        mark4=1;
+        console.log(mark4)
+    }
+    const onClick4False= () => {
+        mark4=0;
+    }
+    const onClick5True = () => {
+        mark5=1;
+        console.log(mark5)
+    }
+    const onClick5False= () => {
+        mark5=0;
+    }
+
+    const onSubmit = () => {
+        count+=mark1+ mark2+ mark3 + mark4+ mark5;
+        if(count >= 3){
+            console.log( 'votre score est' + count  + " vous avez reussi")
+        }
+        else {
+            console.log('votre score est '+count + " :echec")
+        }
+    }
+
+
+    /*const correctValue=()=>{
+        setCount(count+1);
+    }*/
+    /*const wrongValue=()=>{
+        setCount(count-1);
+    }*/
+
     return (
         <div className="container py-5">
             <div className="row mb-4">
@@ -32,10 +97,10 @@ const ReactQuiz = () => {
                             
                             <h4 >Who develops React.js?</h4>
                             <div>
-                                <MDBRadio name='aa' id='q1' label='Google' />
-                                <MDBRadio name='aa' id='q2' label='Twitter'  />
-                                <MDBRadio name='aa' id='q3' label='Apple'  />
-                                <MDBRadio name='aa' id='q4' label='Facebook'  />  
+                                <MDBRadio name='aa' id='q1' label='Google' onClick={(event)=>{onClick1False();console.log(event)}} />
+                                <MDBRadio name='aa' id='q2' label='Twitter' onClick={()=>onClick1False()}  />
+                                <MDBRadio name='aa' id='q3' label='Apple' onClick={()=>onClick1False()} />
+                                <MDBRadio name='aa' id='q4' label='Facebook' onClick={()=>{onClick1True()}} />  
                             </div>
                         </MDBCard>
                             <br/> <br/>
@@ -43,21 +108,21 @@ const ReactQuiz = () => {
                             
                             <h4 >Props are __________ in other components</h4>
                             <div>
-                                <MDBRadio name='bb' id='q1' label='Injected' />
-                                <MDBRadio name='bb' id='q2' label='methods' />
-                                <MDBRadio name='bb' id='q3' label='Both A and B are true' />
-                                <MDBRadio name='bb' id='q4' label='None of these answers are true' />
+                                <MDBRadio name='bb' id='q1' label='Injected' onClick={()=>onClick2True()}/>
+                                <MDBRadio name='bb' id='q2' label='methods' onClick={()=>onClick2False()} />
+                                <MDBRadio name='bb' id='q3' label='Both A and B are true' onClick={()=>onClick2False()} />
+                                <MDBRadio name='bb' id='q4' label='None of these answers are true' onClick={()=>onClick2False()} />
                             </div>
                         </MDBCard>
                         <br/> <br/>
                         <MDBCard className='w-75' style={{padding:20}}>
                             
-                            <h4 >Props in React ful________</h4>
+                            <h4 >In React, what is used to transmit data to an external component?</h4>
                             <div>
-                                <MDBRadio name='cc' id='q1' label='Be modified inside the component' />
-                                <MDBRadio name='cc' id='q2' label='Not to be modified in the component' />
-                                <MDBRadio name='cc' id='q3' label='Be modified in other component' />
-                                <MDBRadio name='cc' id='q4' label='None of these answers are true' /> 
+                                <MDBRadio name='cc' id='q1' label='At setState' onClick={()=>onClick3False()}/>
+                                <MDBRadio name='cc' id='q2' label='render with arguments' onClick={()=>onClick3False()}/>
+                                <MDBRadio name='cc' id='q3' label='props' onClick={()=>onClick3True()}/>
+                                <MDBRadio name='cc' id='q4' label='PropTypes' onClick={()=>onClick3False()}/> 
                             </div>
                         </MDBCard>
                         <br/> <br/>
@@ -65,27 +130,27 @@ const ReactQuiz = () => {
                             
                             <h4 >Which port is the default port where the webpack-dev-server will run?</h4>
                             <div>
-                                <MDBRadio name='dd' id='q1' label='8000' />
-                                <MDBRadio name='dd' id='q2' label='3000' />
-                                <MDBRadio name='dd' id='q3' label='8080' />
-                                <MDBRadio name='dd' id='q3' label='3306' />
+                                <MDBRadio name='dd' id='q1' label='8000' onClick={()=>onClick4False()} />
+                                <MDBRadio name='dd' id='q2' label='3000' onClick={()=>onClick4True()}/>
+                                <MDBRadio name='dd' id='q3' label='8080' onClick={()=>onClick4False()}/>
+                                <MDBRadio name='dd' id='q3' label='3306' onClick={()=>onClick4False()}/>
                             </div>
                         </MDBCard>
                         <br/> <br/>
                         <MDBCard className='w-75' style={{padding:20}}>
                             
-                            <h4>None of these answers are trueWhat are the two ways that data is processed in React?</h4>
+                            <h4>What is the name of the developer of React.js?</h4>
                             <div>
-                                <MDBRadio name='ee' id='q1' label='state and props' />
-                                <MDBRadio name='ee' id='q2' label='services and components' />
-                                <MDBRadio name='ee' id='q3' label='state and services' />
-                                <MDBRadio name='ee' id='q4' label='props and components' /> 
+                                <MDBRadio name='ee' id='q1' label='Jordan mike' onClick={()=>onClick5False()}/>
+                                <MDBRadio name='ee' id='q2' label='Jordan Walke' onClick={()=>onClick5True()} />
+                                <MDBRadio name='ee' id='q3' label='Jordan Lee' onClick={()=>onClick5False()} />
+                                <MDBRadio name='ee' id='q4' label='Tim Lee' onClick={()=>onClick5False()}/> 
                             </div>
                         </MDBCard>
                     <br/>
                     <br/>
                     
-                    <a style={{marginLeft:"30%"}} href='#' class="btn btn-success btn-md active" role="button" aria-pressed="true">Submit</a>
+                    <a style={{marginLeft:"30%"}} href='#' className="btn btn-success btn-md active" role="button" aria-pressed="true" onClick={()=>onSubmit()}>Submit</a>
                   
                     </div>
                     
