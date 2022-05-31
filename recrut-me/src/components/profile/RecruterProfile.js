@@ -2,13 +2,19 @@ import axios from "axios";
 import React from "react";
 import "./clientProfile.css";
 import { useState, useEffect } from "react";
-import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import {
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBBtn,
+} from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
-import Candidatures from "./Candidatures";
-
+import Img1 from "./icons/suitcase.png";
 
 export default function RecruterProfile() {
-  const [jobs, setJobs] = useState([])
+  const [jobs, setJobs] = useState([]);
   const token = localStorage.getItem("token");
   const [recruter, setRecruter] = useState({
     compagnyName: "",
@@ -21,49 +27,35 @@ export default function RecruterProfile() {
   });
   const getProfile = () => {
     const token = localStorage.getItem("token");
-    console.log("couocu");
     axios
       .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
-        console.log("11");
-        console.log(result);
-        if (result.data.image === undefined) {
-          setRecruter({
-            compagnyName: result.data.compagnyName,
-            idCompagny: result.data.idCompagny,
-            domaine: result.data.domaine,
-            facebookLink: result.data.facebookLink,
-            linkedinLink: result.data.linkedinLink,
-            email: result.data.email,
-            image:
-              "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-          });
-        } else {
-          setRecruter({
-            compagnyName: result.data.compagnyName,
-            compagnyId: result.data.compagnyId,
-            domaine: result.data.domaine,
-            facebookLink: result.data.facebookLink,
-            linkedinLink: result.data.linkedinLink,
-            email: result.data.email,
-            image: result.data.image,
-          });
-        }
+        setRecruter({
+          compagnyName: result.data.compagnyName,
+          idCompagny: result.data.idCompagny,
+          domaine: result.data.domaine,
+          facebookLink: result.data.facebookLink,
+          linkedinLink: result.data.linkedinLink,
+          email: result.data.email,
+          image:
+            "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+        });
       });
 
-    axios.get('http://localhost:8000/recrutme/authrecruter/offres', {
-      headers: ({
-        Authorization: 'Bearer ' + token
+    axios
+      .get("http://localhost:8000/recrutme/authrecruter/offres", {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
       })
-    })
-      .then(res => {
-        setJobs(res.data)
+      .then((res) => {
+        setJobs(res.data);
         console.log(jobs);
       })
-      .catch(err => console.log(err))
+      .catch((err) => console.log(err));
   };
 
-  const setImage = (event) => {
+  /*const setImage = (event) => {
     const token = localStorage.getItem("token");
     const fd = new FormData();
     const file = event.target.files[0];
@@ -72,14 +64,13 @@ export default function RecruterProfile() {
     axios
       .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
       .then((result) => {
-
         recruter.image = result.data.image;
       });
-  };
+  };*/
 
   useEffect(() => {
     getProfile();
-  }  );
+  }, []);
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
@@ -89,21 +80,12 @@ export default function RecruterProfile() {
             <div>
               <img
                 className="rounded-circle avatar-xl img-thumbnail"
-                src={recruter.image}
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
                 alt="profile"
                 style={{ height: "10rem", width: "10rem" }}
               />
             </div>
-            <div className="d-none d-md-block">
-              <form action="" method="post" enctype="multipart/form-data">
-                <input
-                  type="file"
-                  name="profile"
-                  id="fileUploadField"
-                  onChange={(event) => setImage(event)}
-                ></input>
-              </form>
-            </div>
+
             <br />
             <h4 className="mb-0" style={{ color: "black" }}>
               {recruter.compagnyName}
@@ -204,20 +186,36 @@ export default function RecruterProfile() {
                   Projects
                 </h5>
                 <div>
-                  {
-                    jobs.map(job =>
-                      <div>
-                        <MDBCard>
-                          <MDBCardBody>
-                            <MDBCardTitle>{job.poste}</MDBCardTitle>
-                            <MDBCardText>{job.description}</MDBCardText>
-                            <Link to=  {`/candidatures/${job.id}`} >See Candidatures </Link>
-                              {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
-                            </MDBCardBody>
-                        </MDBCard>
-                      </div>)
-                  }
-
+                  {jobs.map((job) => (
+                    <div>
+                      <MDBCard>
+                        <MDBCardBody>
+                          <MDBCardTitle
+                            style={{
+                              marginRight: "550px",
+                              color: "#00ADBB",
+                              fontFamily: "Oswald",
+                            }}
+                          >
+                            <div style={{ display: "flex" }}>
+                              <img src={Img1} />
+                              &nbsp;&nbsp;
+                              {job.poste}
+                            </div>
+                          </MDBCardTitle>
+                          <MDBCardText>{job.description}</MDBCardText>
+                          <Link
+                            to={`/candidatures/${job.id}`}
+                            style={{ color: "#ad0e88", fontWeight: "bolder" }}
+                          >
+                            See Candidatures
+                          </Link>
+                          {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
+                        </MDBCardBody>
+                      </MDBCard>
+                      <br />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
