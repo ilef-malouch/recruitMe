@@ -51,7 +51,15 @@ export default function AddJobOffer() {
                 </div>
                 <div class="mb-3">
                     <label for="secteur" class="form-label">Field</label>
-                    <input type="text" class="form-control" id="secteur" onChange={e => setDetails({ ...details, secteur: e.target.value })} value={details.secteur} />
+                   
+                    <select class="form-select" id="secteur" aria-label="Type of " onChange={e => setDetails({ ...details, secteur: e.target.value })} value={details.secteur}>
+                    <option value="Developpement">Developpement</option>
+                        <option value="Santé">Santé</option>
+                        <option value="Justice">Justice</option>
+                        <option value="Restauration">Restauration</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Management">Management</option>
+                    </select>
                 </div>
                 <div class="row  ">
                     <div class="col mb-3">
@@ -72,11 +80,11 @@ export default function AddJobOffer() {
                 <div class="col  mb-3">
                     <select class="form-select" id="floatingSelectGrid" aria-label="Type of " onChange={e => setDetails({ ...details, typeContrat: e.target.value })} value={details.typeContrat}>
                         <option selected>select the type of contract</option>
-                        <option value="1">Full Time contract</option>
-                        <option value="2">Part time contract</option>
-                        <option value="3">Fixed term contract</option>
-                        <option value="4">Temporary contract</option>
-                        <option value="5">Agency contract</option>
+                        <option value="Full Time contract">Full Time contract</option>
+                        <option value="Part time contract">Part time contract</option>
+                        <option value="Fixed term contract">Fixed term contract</option>
+                        <option value="Temporary contract">Temporary contract</option>
+                        <option value="Agency contract">Agency contract</option>
                     </select>
                 </div>
                 <div>
