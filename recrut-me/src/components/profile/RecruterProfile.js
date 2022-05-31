@@ -6,6 +6,7 @@ import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn 
 
 
 export default function RecruterProfile() {
+  
   const [recruter, setRecruter] = useState({
     compagnyName: "",
     idCompagny: "",
@@ -64,7 +65,7 @@ export default function RecruterProfile() {
 
   useEffect(() => {
     getProfile();
-  },[]);
+  });
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
