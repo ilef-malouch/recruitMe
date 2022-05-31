@@ -12,6 +12,7 @@ import ClientProfile from "./components/profile/ClientProfile";
 import RecruterProfile from "./components/profile/RecruterProfile";
 import  Footer  from "./components/footer/Footer";
 import AddJobOffer from "./components/jobs/AddJobOffer";
+import JobDetails from "./components/jobs/JobDetails";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                         <Route exact path="/signup-recruter" element={<FormRecruter />} />
                         <Route exact path="/signin-client" element={<FormSignInClient />} />
                         <Route exact path="/addoffer" element={<AddJobOffer />} />
+                        <Route exact path="/job/:id" element={<JobDetails />} />
                         <Route
                             exact
                             path="/signin-recruter"

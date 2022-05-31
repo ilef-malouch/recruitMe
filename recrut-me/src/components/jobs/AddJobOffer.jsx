@@ -96,7 +96,7 @@ export default function AddJobOffer() {
                 {/* <button type="submit" class="btn btn-primary">Submit Offer </button> */}
                 <div style={{alignItems:true}} container alignItems="center" justify="center" direction="column">
 
-                <Button variant="contained" color="primary" type="submit">
+                <Button size="lg" variant="contained" color="primary" type="submit">
                     Submit  
                 </Button>
                 </div>
