@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Badge, Button, Figure } from "react-bootstrap";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+
 
 const JobDetails = () => {
     const [job, setJob] = useState('');
