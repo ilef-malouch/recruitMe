@@ -1,8 +1,8 @@
 import React from 'react';
 import Img from '../../../images/quiz/react.png';
-import {MDBRadio, MDBBtn} from "mdb-react-ui-kit";
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdb-react-ui-kit';
-import { useState } from 'react';
+import {MDBRadio} from "mdb-react-ui-kit";
+import { MDBCard,} from 'mdb-react-ui-kit';
+
 
 const ReactQuiz = () => {
 
@@ -12,6 +12,7 @@ const ReactQuiz = () => {
     var mark3=0;
     var mark4=0;
     var mark5=0;
+    var path = "#";
 
     const onClick1True = () => {
         mark1=1;
@@ -55,19 +56,17 @@ const ReactQuiz = () => {
         count+=mark1+ mark2+ mark3 + mark4+ mark5;
         if(count >= 3){
             console.log( 'votre score est' + count  + " vous avez reussi")
+            alert('your score is ' + count  + "/5 . Good job");
+            /*path='http://localhost:3000/quizes/react/success'
+            console.log(path)*/
         }
         else {
             console.log('votre score est '+count + " :echec")
+            alert('your score is ' + count  + "/5 . Try again");
+            /*path='http://localhost:3000/quizes/react/fail'
+            console.log(path)*/
         }
     }
-
-
-    /*const correctValue=()=>{
-        setCount(count+1);
-    }*/
-    /*const wrongValue=()=>{
-        setCount(count-1);
-    }*/
 
     return (
         <div className="container py-5">
@@ -150,7 +149,7 @@ const ReactQuiz = () => {
                     <br/>
                     <br/>
                     
-                    <a style={{marginLeft:"30%"}} href='#' className="btn btn-success btn-md active" role="button" aria-pressed="true" onClick={()=>onSubmit()}>Submit</a>
+                    <a style={{marginLeft:"30%"}} href="#" className="btn btn-success btn-md active" role="button" aria-pressed="true" onClick={()=>onSubmit()}>Submit</a>
                   
                     </div>
                     

@@ -18,7 +18,7 @@ const Quiz = (props) => {
                         {props.details}
                     </span>
                     <br/>
-                    <a href={props.link} class="btn btn-success btn-sm active" role="button" aria-pressed="true">Quiz</a>
+                    <a href={props.link} className="btn btn-success btn-sm active" role="button" aria-pressed="true">Quiz</a>
                 </div>
             </div>
         
