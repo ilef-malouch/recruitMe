@@ -18,6 +18,7 @@ import ReactQuiz from "./components/pages/quizes/ReactQuiz";
 import AngularQuiz from "./components/pages/quizes/AngularQuiz";
 import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz";
 import PythonQuiz from "./components/pages/quizes/PythonQuiz";
+import BlogDetails from "./components/jobs/BlogDetails";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/signup-recruter" element={<FormRecruter />} />
             <Route exact path="/signin-client" element={<FormSignInClient />} />
             <Route exact path="/addoffer" element={<AddJobOffer />} />
+            <Route exact path="/job2/:id" element={<BlogDetails />} />
             <Route exact path="/job/:id" element={<JobDetails />} />
             <Route
               exact
