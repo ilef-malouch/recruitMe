@@ -5,8 +5,8 @@ import { Badge, Button, Figure } from "react-bootstrap";
 import { useParams } from "react-router";
 
 
-const JobDetails = () => {
-    const [job, setJob] = useState('');
+const JobDetails2 = ({job}) => {
+    // const [job, setJob] = useState('');
     const [recruter, setRecruter] = useState('');
     const [candidature, setCandidature] = useState('');
     const { id } = useParams();
@@ -30,7 +30,6 @@ const JobDetails = () => {
             cv: candidature.cv,
             email: candidature.email,
             phone: candidature.phone,
-            offre:id
         }
         const token = localStorage.getItem('token');
 
@@ -65,16 +64,20 @@ const JobDetails = () => {
     };
 
 
-    useEffect(() => {
-        axios.get(`http://localhost:8000/recrutme/jobs/${id}`)
-            .then(response => {
-                setJob(response.data);
-                console.log("hey", job);
-            }
-            )
-            .catch(err => console.log(err)); 
+    // useEffect(() => {
+    //     axios.get(`http://localhost:8000/recrutme/jobs/${id}`)
+    //         .then(response => {
+    //             setJob(response.data);
+    //             console.log("hey", job);
+    //         }
+    //         )
+    //         .catch(err => console.log(err));
+    //     // setTimeout(() => {
 
-    },[] );
+    //     //     const compagny = job.recruter.CompagnyName;
+    //     // }, 1000);
+
+    // }, []);
     return (
         <>
             <style type="text/css">
@@ -84,9 +87,6 @@ const JobDetails = () => {
       #ad0e88 ; 
     } `}
             </style>
-            {
-
-            job  ?
             <div className="container mb-3" >
                 <div>
                     <div className="jobdetails">
@@ -98,7 +98,7 @@ const JobDetails = () => {
                                         width={80}
                                         height={100}
                                         alt="logo"
-                                        src="https://themezhub.net/live-workplex/workplex/assets/img/c-1.png"
+                                        src={job.recruter.Image}
                                     />
 
                                     <Figure.Caption>
@@ -158,10 +158,9 @@ const JobDetails = () => {
                         </div>
                     </div>
                 </div>
-            </div> :null
-}
+            </div>
         </>
     );
 }
 
-export default JobDetails;
+export default JobDetails2;
