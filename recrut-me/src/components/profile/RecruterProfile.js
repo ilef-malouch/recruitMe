@@ -3,9 +3,13 @@ import React from "react";
 import "./clientProfile.css";
 import { useState, useEffect } from "react";
 import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import { Link } from "react-router-dom";
+import Candidatures from "./Candidatures";
 
 
 export default function RecruterProfile() {
+  const [jobs, setJobs] = useState([])
+  const token = localStorage.getItem("token");
   const [recruter, setRecruter] = useState({
     compagnyName: "",
     idCompagny: "",
@@ -15,7 +19,6 @@ export default function RecruterProfile() {
     email: "",
     image: "",
   });
-
   const getProfile = () => {
     const token = localStorage.getItem("token");
     console.log("couocu");
@@ -47,6 +50,17 @@ export default function RecruterProfile() {
           });
         }
       });
+
+    axios.get('http://localhost:8000/recrutme/authrecruter/offres', {
+      headers: ({
+        Authorization: 'Bearer ' + token
+      })
+    })
+      .then(res => {
+        setJobs(res.data)
+        console.log(jobs);
+      })
+      .catch(err => console.log(err))
   };
 
   const setImage = (event) => {
@@ -58,13 +72,14 @@ export default function RecruterProfile() {
     axios
       .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
       .then((result) => {
+
         recruter.image = result.data.image;
       });
   };
 
   useEffect(() => {
     getProfile();
-  },[]);
+  }  );
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
@@ -189,13 +204,20 @@ export default function RecruterProfile() {
                   Projects
                 </h5>
                 <div>
-                    <MDBCard>
-                      <MDBCardBody>
-                        <MDBCardTitle>Special title treatment</MDBCardTitle>
-                        <MDBCardText>With supporting text below as a natural lead-in to additional content.</MDBCardText>
-                        <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{backgroundColor:"#ad0e88",color:"white"}} role="button" aria-pressed="true">Voir candidature</a>
-                      </MDBCardBody>
-                    </MDBCard>
+                  {
+                    jobs.map(job =>
+                      <div>
+                        <MDBCard>
+                          <MDBCardBody>
+                            <MDBCardTitle>{job.poste}</MDBCardTitle>
+                            <MDBCardText>{job.description}</MDBCardText>
+                            <Link to=  {`/candidatures/${job.id}`} >See Candidatures </Link>
+                              {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
+                            </MDBCardBody>
+                        </MDBCard>
+                      </div>)
+                  }
+
                 </div>
               </div>
             </div>

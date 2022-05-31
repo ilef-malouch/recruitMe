@@ -18,52 +18,6 @@ import ReactQuiz from "./components/pages/quizes/ReactQuiz";
 import AngularQuiz from "./components/pages/quizes/AngularQuiz";
 import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz";
 import PythonQuiz from "./components/pages/quizes/PythonQuiz";
-<<<<<<< HEAD
-import BlogDetails from "./components/jobs/BlogDetails";
-
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <NavbarComp />
-        <>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/jobs" element={<Jobs />} />
-            <Route exact path="/signup-client" element={<FormClient />} />
-            <Route exact path="/signup-recruter" element={<FormRecruter />} />
-            <Route exact path="/signin-client" element={<FormSignInClient />} />
-            <Route exact path="/addoffer" element={<AddJobOffer />} />
-            <Route exact path="/job2/:id" element={<BlogDetails />} />
-            <Route exact path="/job/:id" element={<JobDetails />} />
-            <Route
-              exact
-              path="/signin-recruter"
-              element={<FormSignInRecruter />}
-            />
-            <Route exact path="/tips" element={<Tips />} />
-            <Route exact path="/client-profile" element={<ClientProfile />} />
-            <Route
-              exact
-              path="/recruter-profile"
-              element={<RecruterProfile />}
-            />
-            <Route exact path="/quizes" element={<Quizes />} />
-            <Route exact path="/quizes/react" element={<ReactQuiz />} />
-            <Route exact path="/quizes/angular" element={<AngularQuiz />} />
-            <Route
-              exact
-              path="/quizes/springboot"
-              element={<SpringbootQuiz />}
-            />
-            <Route exact path="/quizes/python" element={<PythonQuiz />} />
-          </Routes>
-        </>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
-=======
 import Fail from "./components/pages/quizes/Fail";
 import SuccessReact from "./components/pages/quizes/SuccessReact";
 import SuccessAngular from "./components/pages/quizes/SuccessAngular";
@@ -117,7 +71,6 @@ function App() {
             </div>
         </BrowserRouter>
     );
->>>>>>> 890279438b11c427f28496f264115f3968d8d058
 }
 
 export default App;
