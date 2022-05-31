@@ -12,11 +12,15 @@ import ClientProfile from "./components/profile/ClientProfile";
 import RecruterProfile from "./components/profile/RecruterProfile";
 import  Footer  from "./components/footer/Footer";
 import AddJobOffer from "./components/jobs/AddJobOffer";
+<<<<<<< HEAD
+import JobDetails from "./components/jobs/JobDetails";
+=======
 import Quizes from "./components/pages/quizes/Quizes";
 import ReactQuiz from "./components/pages/quizes/ReactQuiz";
 import AngularQuiz from "./components/pages/quizes/AngularQuiz";
 import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz";
 import PythonQuiz from "./components/pages/quizes/PythonQuiz";
+>>>>>>> 4bd5843697a845ca6c44b4240ec63beab41b3620
 
 function App() {
     return (
@@ -31,6 +35,7 @@ function App() {
                         <Route exact path="/signup-recruter" element={<FormRecruter />} />
                         <Route exact path="/signin-client" element={<FormSignInClient />} />
                         <Route exact path="/addoffer" element={<AddJobOffer />} />
+                        <Route exact path="/job/:id" element={<JobDetails />} />
                         <Route
                             exact
                             path="/signin-recruter"
