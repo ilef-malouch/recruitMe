@@ -9,6 +9,7 @@ const PythonQuiz = () => {
     var mark3=0;
     var mark4=0;
     var mark5=0;
+    var path = "#"; 
 
     const onClick1True = () => {
         mark1=1;
@@ -52,9 +53,13 @@ const PythonQuiz = () => {
         count+=mark1+ mark2+ mark3 + mark4+ mark5;
         if(count >= 3){
             console.log( 'votre score est' + count  + " vous avez reussi")
+            alert('your score is ' + count  + "/5 . Good job");
+            //path='http://localhost:3000/quizes/python/success'
         }
         else {
             console.log('votre score est '+count + " :echec")
+            alert('your score is ' + count  + "/5 . Try again");
+            //path='http://localhost:3000/quizes/python/fail'
         }
     }
     return (
