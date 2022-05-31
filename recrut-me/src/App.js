@@ -64,7 +64,7 @@ function App() {
                         <Route exact path="/quizes/python" element={<PythonQuiz />} />
                         <Route exact path="/quizes/python/success" element={<SuccessPython />} />
                         <Route exact path="/quizes/python/fail" element={< Fail />} />
-                        <Route exact path="/candidatures" element={< Candidatures />} />
+                        <Route exact path="/candidatures/:id" element={< Candidatures />} />
                     </Routes>
                 </>
                 <Footer />

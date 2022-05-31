@@ -211,7 +211,7 @@ export default function RecruterProfile() {
                           <MDBCardBody>
                             <MDBCardTitle>{job.poste}</MDBCardTitle>
                             <MDBCardText>{job.description}</MDBCardText>
-                            <Link to=  {`/candidatures/${job.id}`} >See Candidatures </Link>
+                            <Link to=  {`/candidatures/${job._id}`} >See Candidatures </Link>
                               {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
                             </MDBCardBody>
                         </MDBCard>
