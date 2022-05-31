@@ -72,13 +72,9 @@ const JobDetails = () => {
                 console.log("hey", job);
             }
             )
-            .catch(err => console.log(err));
-        // setTimeout(() => {
+            .catch(err => console.log(err)); 
 
-        //     const compagny = job.recruter.CompagnyName;
-        // }, 1000);
-
-    }, []);
+    },[] );
     return (
         <>
             <style type="text/css">
@@ -88,6 +84,9 @@ const JobDetails = () => {
       #ad0e88 ; 
     } `}
             </style>
+            {
+
+            job  ?
             <div className="container mb-3" >
                 <div>
                     <div className="jobdetails">
@@ -103,7 +102,7 @@ const JobDetails = () => {
                                     />
 
                                     <Figure.Caption>
-                                        {/* <h2>{compagny} </h2> */}
+                                        {/* <h2>{job.recruter.CompagnyName} </h2> */}
                                     </Figure.Caption>
                                 </Figure>
                                 {/* <div className="card-subtitle text-muted mb-2" >
@@ -159,7 +158,8 @@ const JobDetails = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> :null
+}
         </>
     );
 }
