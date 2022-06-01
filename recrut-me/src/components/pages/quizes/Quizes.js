@@ -20,10 +20,10 @@ const Quizes = () =>  {
         </div>
 
         <div className="row text-center">
-            <Quiz name="React" details=" 5 questions" img={Img1} link="http://localhost:3000/quizes/react" />
-            <Quiz name="Angular" details=" 5 questions" img={Img2} link="http://localhost:3000/quizes/angular" />
-            <Quiz name="Spring Boot" details=" 5 questions" img={Img3} link="http://localhost:3000/quizes/springboot"/>
-            <Quiz name="Python" details=" 5 questions" img={Img4} link="http://localhost:3000/quizes/python" />
+            <Quiz name="React" details=" 5 questions" img={Img1}   /> 
+            <Quiz name="Angular" details=" 5 questions" img={Img2}  />
+            <Quiz name="SpringBoot" details=" 5 questions" img={Img3}  />
+            <Quiz name="Python" details=" 5 questions" img={Img4} />
         </div>    
       </div>
     );

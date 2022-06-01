@@ -14,7 +14,7 @@ export default function Footer() {
                 <i className="fas fa-gem me-3"></i>RecrutMe
               </h6>
               <p>
-                RecrutMe helps you find you dream job and build your profional
+                RecrutMe helps you find you dream job and build your professional
                 career.
               </p>
             </div>

@@ -8,8 +8,7 @@ import Candidatures from "./Candidatures";
 
 
 export default function RecruterProfile() {
-  const [jobs, setJobs] = useState([])
-  const token = localStorage.getItem("token");
+  const [jobs, setJobs] = useState([]) 
   const [recruter, setRecruter] = useState({
     compagnyName: "",
     idCompagny: "",
@@ -22,31 +21,30 @@ export default function RecruterProfile() {
   const getProfile = () => {
     const token = localStorage.getItem("token");
     console.log("couocu");
-    axios
-      .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
+    axios.get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
         console.log("11");
         console.log(result);
-        if (result.data.image === undefined) {
+        if (result.data.Image === undefined) {
           setRecruter({
-            compagnyName: result.data.compagnyName,
-            idCompagny: result.data.idCompagny,
-            domaine: result.data.domaine,
-            facebookLink: result.data.facebookLink,
-            linkedinLink: result.data.linkedinLink,
-            email: result.data.email,
+            compagnyName: result.data.CompagnyName,
+            idCompagny: result.data.IdCompagny,
+            domaine: result.data.Domaine,
+            facebookLink: result.data.FacebookLink,
+            linkedinLink: result.data.LinkedinLink,
+            email: result.data.Email,
             image:
               "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
           });
         } else {
           setRecruter({
-            compagnyName: result.data.compagnyName,
-            compagnyId: result.data.compagnyId,
-            domaine: result.data.domaine,
-            facebookLink: result.data.facebookLink,
-            linkedinLink: result.data.linkedinLink,
-            email: result.data.email,
-            image: result.data.image,
+            compagnyName: result.data.CompagnyName,
+            idCompagny: result.data.IdCompagny,
+            domaine: result.data.Domaine,
+            facebookLink: result.data.FacebookLink,
+            linkedinLink: result.data.LinkedinLink,
+            email: result.data.Email,
+            image: result.data.Image,
           });
         }
       });
@@ -72,14 +70,14 @@ export default function RecruterProfile() {
     axios
       .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
       .then((result) => {
-
-        recruter.image = result.data.image;
+setRecruter({...recruter, image:result.data.image})
+        // recruter.image = result.data.image;
       });
   };
 
   useEffect(() => {
     getProfile();
-  }  );
+  },[]);
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
@@ -211,9 +209,9 @@ export default function RecruterProfile() {
                           <MDBCardBody>
                             <MDBCardTitle>{job.poste}</MDBCardTitle>
                             <MDBCardText>{job.description}</MDBCardText>
-                            <Link to=  {`/candidatures/${job._id}`} >See Candidatures </Link>
-                              {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
-                            </MDBCardBody>
+                            <Link to={`/candidatures/${job._id}`} >See Candidatures </Link>
+                            {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
+                          </MDBCardBody>
                         </MDBCard>
                       </div>)
                   }

@@ -43,7 +43,7 @@ export default function AddJobOffer() {
     return (
         <div>
           {/* <section className="curvejobSection"></section>  */}
-                <h1 className='title'>POST A NEW OFFER</h1>
+                <h1 className='title '>POST A NEW OFFER</h1>
             <form onSubmit={submitHandler} method='POST' style={{ padding :'3rem 10rem' }}>
                 <div class="mb-3">
                     <label for="poste" class="form-label">Job Title</label>

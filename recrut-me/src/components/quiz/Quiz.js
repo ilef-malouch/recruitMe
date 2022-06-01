@@ -1,6 +1,7 @@
 import React from 'react';
 import './Quiz.css';
 import {MDBBtn} from 'mdb-react-ui-kit'
+import { Link } from 'react-router-dom';
 
 const Quiz = (props) => {
     return (
@@ -18,7 +19,8 @@ const Quiz = (props) => {
                         {props.details}
                     </span>
                     <br/>
-                    <a href={props.link} className="btn btn-success btn-sm active" role="button" aria-pressed="true">Quiz</a>
+                    {/* <a href={props.link} className="btn btn-success btn-sm active" role="button" aria-pressed="true">Quiz</a> */}
+                    <Link  to=  {`/quizes/${props.name}`}>Quiz</Link>
                 </div>
             </div>
         

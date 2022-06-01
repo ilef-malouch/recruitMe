@@ -62,6 +62,7 @@ const NavbarComp = () => {
               <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
               <Nav.Link as={Link} to={"/jobs"}>Jobs</Nav.Link>
               <Nav.Link as={Link} to={"/tips"}>Tips</Nav.Link>
+              <Nav.Link as={Link} to={"/quizes"}>Quiz</Nav.Link>
                
             </Nav>
             <Nav>
@@ -71,7 +72,7 @@ const NavbarComp = () => {
                     (<Nav.Link as={Link} to={"/client-profile"}>Profile</Nav.Link>):
                
                     ( <div >
-                      <Nav.Link as={Link} to={"/recruter-profile"}style={{float:"right"}}>Profile</Nav.Link>
+                      <Nav.Link as={Link} to={"/recruter-profile"}style={{float:"right"}}>Profile</Nav.Link> 
                     <Nav.Link as={Link} to={"/addOffer"}style={{float:"left"}}>Add Offer</Nav.Link></div> )
                   }
                     <Nav.Link as={Link} to={"/"} onClick={signout}>LogOut</Nav.Link>

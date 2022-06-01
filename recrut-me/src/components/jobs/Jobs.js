@@ -225,7 +225,7 @@ function Jobs() {
                               <tr>
                                 <td className="image">
                                   <img
-                                    src="https://via.placeholder.com/400x300/FF8C00"
+                                    src={job.recruter.image}
                                     alt=""
                                   />
                                 </td>

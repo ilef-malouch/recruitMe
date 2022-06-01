@@ -16,7 +16,7 @@ import JobDetails from './components/jobs/jobDetails'
 import Quizes from "./components/pages/quizes/Quizes";
 import ReactQuiz from "./components/pages/quizes/ReactQuiz";
 import AngularQuiz from "./components/pages/quizes/AngularQuiz";
-import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz";
+import SpringbootQuiz from "./components/pages/quizes/SpringbootQuiz" ;
 import PythonQuiz from "./components/pages/quizes/PythonQuiz";
 import Fail from "./components/pages/quizes/Fail";
 import SuccessReact from "./components/pages/quizes/SuccessReact";
@@ -52,18 +52,18 @@ function App() {
                             element={<RecruterProfile />}
                         />
                         <Route exact path="/quizes" element={<Quizes />} />
-                        <Route exact path="/quizes/react" element={<ReactQuiz />} />
-                        <Route exact path="/quizes/react/success" element={<SuccessReact />} />
-                        <Route exact path="/quizes/react/fail" element={< Fail />} />
-                        <Route exact path="/quizes/angular" element={<AngularQuiz />} />
-                        <Route exact path="/quizes/angular/success" element={<SuccessAngular />} />
-                        <Route exact path="/quizes/angular/fail" element={< Fail />} />
-                        <Route exact path="/quizes/springboot" element={<SpringbootQuiz />} />
-                        <Route exact path="/quizes/springboot/success" element={<SuccessSpringboot />} />
-                        <Route exact path="/quizes/springboot/fail" element={< Fail />} />
-                        <Route exact path="/quizes/python" element={<PythonQuiz />} />
-                        <Route exact path="/quizes/python/success" element={<SuccessPython />} />
-                        <Route exact path="/quizes/python/fail" element={< Fail />} />
+                        <Route exact path="/quizes/React" element={<ReactQuiz />} />
+                        <Route exact path="/quizes/React/success" element={<SuccessReact />} />
+                        <Route exact path="/quizes/React/fail" element={< Fail />} />
+                        <Route exact path="/quizes/Angular" element={<AngularQuiz />} />
+                        <Route exact path="/quizes/Angular/success" element={<SuccessAngular />} />
+                        <Route exact path="/quizes/Angular/fail" element={< Fail />} />
+                        <Route exact path="/quizes/SpringBoot" element={<SpringbootQuiz />} />
+                        <Route exact path="/quizes/Springboot/success" element={<SuccessSpringboot />} />
+                        <Route exact path="/quizes/Springboot/fail" element={< Fail />} />
+                        <Route exact path="/quizes/Python" element={<PythonQuiz />} />
+                        <Route exact path="/quizes/Python/success" element={<SuccessPython />} />
+                        <Route exact path="/quizes/Python/fail" element={< Fail />} />
                         <Route exact path="/candidatures/:id" element={< Candidatures />} />
                     </Routes>
                 </>
