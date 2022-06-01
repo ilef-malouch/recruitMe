@@ -17,6 +17,17 @@
     }
 }
 
+section.section {
+    
+    background-image: url("../../images/find/img1.jpg");
+    height: 600px;
+    padding: 0rem 1rem;
+    width: auto;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    
+
+}
 .wrapper-find{
     max-width:1500px;
     margin: 0 auto ;

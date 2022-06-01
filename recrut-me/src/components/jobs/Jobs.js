@@ -4,6 +4,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import img2 from "../../images/jobs/job-search.png";
+import { Button } from "react-bootstrap";
 function Jobs() {
   const [allJobs, setallJobs] = useState([]);
 
@@ -225,28 +227,32 @@ function Jobs() {
                             allJobs.map((job) => (
                               <tr>
                                 <td className="image">
-                                  <img
-                                    src={job.recruter.image}
-                                    alt=""
-                                  />
+                                  <div  > 
+                                    <img src="https://img.icons8.com/plasticine/100/undefined/new-job.png" /> 
+                                  </div> 
                                 </td>
                                 <td className="product">
-                                  <strong>{job.secteur}</strong>
+                                  <strong style={{ color: "#1c8090", fontSize: "20px", textTransform: "uppercase" }}>{job.secteur}</strong>
                                   <br />
-                                  {job.description}
+                                  <br />
+                                  <p style={{ color: "grey", fontSize: "16px" }}>{job.description}</p>
+
+                                  <br />
                                   <br />
                                 </td>
                                 <td>
                                   <Link
                                     to={`/job/${job._id}`}
                                     style={{
+                                      fontSize: "15px",
                                       color: "#ad0e88",
-                                      fontWeight: "bolder",
+                                      fontWeight: "bold",
                                       marginLeft: "-70px",
                                     }}
                                   >
                                     Job Details
                                   </Link>
+
                                 </td>
                               </tr>
                             ))

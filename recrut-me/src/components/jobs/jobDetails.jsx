@@ -46,6 +46,7 @@ const JobDetails = () => {
             })
             .catch(err => {
                 console.log(err.response);
+                window.location.assign('/jobs')
 
             })
     }
@@ -94,20 +95,22 @@ const JobDetails = () => {
                 <div>
                     <div className="jobdetails">
                         <div className="card mt-4 mb-3">
-                            <div className="card-body">
-                                <h3 className="card-title" >{job.poste}</h3>
+                            <div className="card-body"> 
+                                {/* <h3 className="card-title" >{job.poste}</h3> */}
                                 <Figure>
                                     <Figure.Image
                                         width={80}
                                         height={100}
                                         alt="logo"
-                                        src="https://themezhub.net/live-workplex/workplex/assets/img/c-1.png"
+                                        src="https://img.icons8.com/plasticine/100/undefined/new-job.png"
                                     />
 
                                     <Figure.Caption>
                                         {/* <h2>{job.recruter.CompagnyName} </h2> */}
                                     </Figure.Caption>
                                 </Figure>
+                                <strong style={{ color: "#000", fontSize: "40px", textTransform: "uppercase",fontFamily:"Tiro Gurmukhi" ,margin:"1rem" }}>{job.poste}</strong>
+                                 
                                 {/* <div className="card-subtitle text-muted mb-2" >
                                 recruter
                             </div> */}
@@ -116,17 +119,23 @@ const JobDetails = () => {
                                 <Badge bg="warning" text="dark">
                                     {job.typeContrat}
                                 </Badge>
-                                <div className="card-text mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat mollitia, blanditiis aperiam, eum optio suscipit exercitationem, a illum molestiae fuga iste quam quae quos et animi excepturi accusamus! Earum, laborum! </div>
-                                <h4 className="card-title" style={{ fontSize: "1.5rem" }}>Desired Languages:</h4>
-                                <div className="card-text mb-2"> {job.langue}</div>
+                                <div className="card-text mb-2"
+                                style={{ fontSize: "1.5rem",color:"black",fontFamily:"serif",textTransform: "capitalize",letterSpacing:"0.5px" }}
+                                >{job.recruter.CompagnyName}</div>
+                                <h4 className="card-title" style={{ fontWeight:"bold" ,fontSize: "1.5rem" }}>Desired Languages:</h4>
+                                <div className="card-text mb-2"
+                                style={{ fontSize: "1.5rem",color:"black",fontFamily:"serif",textTransform: "capitalize",letterSpacing:"0.5px" }}
+                                > {job.langue}</div>
 
-                                <h4 className="card-title">Description</h4>
-                                <div className="card-text mb-2">{job.description} </div>
-                                <h4 className="card-title">Required Skills:</h4>
-                                <div className="card-text mb-2"> {job.competences} </div>
-                                <Button margin="1rem" variant="contained" color="primary" type="submit">
-                                    Post
-                                </Button>
+                                <h4 className="card-title"style={{ fontWeight:"bold" ,fontSize: "1.5rem" }}>Description</h4>
+                                <div className="card-text mb-2"
+                                style={{ fontSize: "1.5rem",color:"black",fontFamily:"serif",textTransform: "capitalize",letterSpacing:"0.5px" }}
+                                >{job.description} </div>
+                                <h4 className="card-title"style={{ fontWeight:"bold" ,fontSize: "1.5rem" }}>Required Skills:</h4>
+                                <div className="card-text mb-2"
+                                style={{ fontSize: "1.5rem",color:"black",fontFamily:"serif",textTransform: "capitalize",letterSpacing:"0.5px" }}
+                                > {job.competences} </div>
+                                 
                             </div>
                         </div>
 
@@ -144,7 +153,7 @@ const JobDetails = () => {
                                         <label for="phone" class="form-label">Phone Number:</label>
                                         <input type="number" class="form-control" id="phone" onChange={e => setCandidature({ ...candidature, phone: e.target.value })} value={candidature.phone} />
                                     </div>
-                                    <Button margin="1rem" variant="contained" color="primary" type="submit">
+                                    <Button style={{color:"white" ,height:"45px" }} variant="contained" color="primary" type="submit">
                                         Post
                                     </Button>
                                 </form>

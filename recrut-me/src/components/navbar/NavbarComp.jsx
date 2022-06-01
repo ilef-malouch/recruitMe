@@ -55,7 +55,7 @@ const NavbarComp = () => {
       </style>
       <Navbar collapseOnSelect sticky="top" text="custom" expand="lg" bg="custom" variant="dark"  >
         <Container >
-          <Navbar.Brand as={Link} to={"/"}>Logo</Navbar.Brand>
+          <Navbar.Brand as={Link} to={"/"} style={{fontFamily: 'Carter One'}}>RecruitMe</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto text-primary" variant="custom" >

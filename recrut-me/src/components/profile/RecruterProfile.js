@@ -24,8 +24,8 @@ export default function RecruterProfile() {
     email: "",
     image: "",
   });
+  const token = localStorage.getItem("token");
   const getProfile = () => {
-    const token = localStorage.getItem("token");
     axios
       .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
@@ -197,13 +197,9 @@ export default function RecruterProfile() {
               <div className="tab-pane show active" id="about-me">
                 <h5 className="mb-5 text-uppercase">
                   <i className="mdi mdi-briefcase mr-1"></i>
-                  Offre :
+                  Offres :
                 </h5>
-
-                <h5 className="mb-3 mt-4 text-uppercase">
-                  <i className="mdi mdi-cards-variant mr-1"></i>
-                  Projects
-                </h5>
+ 
                 <div>
                   {jobs.map((job) => (
                     <div >
@@ -228,7 +224,7 @@ export default function RecruterProfile() {
                             </p>
                            </MDBCardText>
                           <Link
-                            to={`/candidatures/${job.id}`}
+                            to={`/candidatures/${job._id}`}
                             style={{ color: "#ad0e88", fontWeight: "bolder" }}
                           >
                             See Candidatures
