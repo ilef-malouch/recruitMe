@@ -3,9 +3,9 @@ import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+import Img  from "./candid.jpg";
 
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdb-react-ui-kit';
 
 
 export default function Candidatures() {
@@ -21,22 +21,39 @@ export default function Candidatures() {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className="container">
+    <div>
+      <img src={Img} className='img-fluid shadow-4' alt='...' style={{width:1900, height:300}}/>
+      <div className="container">
+      
       {
         
         candidas.length ?
       candidas.map(candid =>
         <div className="container" style={{ marginTop: "25px", marginBottom: "25px" }}>
           <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>{candid.email}</MDBCardTitle>
-              <MDBCardText> {candid.phone}     </MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
+                        <MDBCardBody>
+                          <MDBCardTitle
+                            style={{
+                              marginRight: "550px",
+                              color: "blach",
+                              fontFamily: "Oswald",
+                            }}
+                          >
+                            <div style={{ display: "flex" }}>
+                              
+                              
+                              <b style={{color:'#00adca', marginRight:15}}>Email: </b>{candid.email}
+                            </div>
+                          </MDBCardTitle>
+                          <MDBCardText><b style={{color:'#00adca', marginRight:15}}>Phone Number:  </b>   {candid.phone}</MDBCardText>
+                         </MDBCardBody>
+                      </MDBCard>
         </div>
       ): null }
 
 
     </div>
+    </div>
+    
   )
 }
