@@ -158,7 +158,7 @@ export default function RecruterProfile() {
           </div>
         </div>
 
-        <div className="col-lg-8 col-xl-8">
+        <div className="col-lg-20 col-xl-20">
           <div className="card-box">
             <ul className="nav nav-pills navtab-bg">
               <li className="nav-item">
@@ -187,9 +187,9 @@ export default function RecruterProfile() {
                 </h5>
                 <div>
                   {jobs.map((job) => (
-                    <div>
-                      <MDBCard>
-                        <MDBCardBody>
+                    <div >
+                      <MDBCard >
+                        <MDBCardBody >
                           <MDBCardTitle
                             style={{
                               marginRight: "550px",
@@ -198,12 +198,16 @@ export default function RecruterProfile() {
                             }}
                           >
                             <div style={{ display: "flex" }}>
-                              <img src={Img1} />
+                              <img src={Img1} style={{ marginRight:'20px'}} />
                               &nbsp;&nbsp;&nbsp;
-                              {job.poste}
+                              <p style={{ display: "inline",width:"100%" }}>{job.poste}</p>
                             </div>
                           </MDBCardTitle>
-                          <MDBCardText>{job.description}</MDBCardText>
+                          <MDBCardText >
+                            <p >
+                            {job.description}
+                            </p>
+                           </MDBCardText>
                           <Link
                             to={`/candidatures/${job.id}`}
                             style={{ color: "#ad0e88", fontWeight: "bolder" }}
