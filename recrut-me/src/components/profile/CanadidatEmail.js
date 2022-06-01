@@ -3,7 +3,7 @@ import React from "react";
 import "./clientProfile.css";
 import { useState, useEffect } from "react";
 
-export default function ClientProfile() {
+export default function CanadidatEmail() {
   const [client, setClient] = useState({
     firstName: "",
     familyName: "",
@@ -17,10 +17,10 @@ export default function ClientProfile() {
   });
 
   const getProfile = () => {
-    const token = localStorage.getItem("token");
+    const email = localStorage.getItem("candidatEmail");
 
     axios
-      .get("http://localhost:8000/recrutme/authclient/clientInfo/" + token)
+      .get("http://localhost:8000/recrutme/authclient/candidateInfo/" + email)
       .then((result) => {
         console.log(result.data.cv);
         if (result.data.image === undefined) {
@@ -94,16 +94,6 @@ export default function ClientProfile() {
                 alt="profile"
                 style={{ height: "10rem", width: "10rem" }}
               />
-            </div>
-            <div className="d-none d-md-block">
-              <form action="" method="post" enctype="multipart/form-data">
-                <input
-                  type="file"
-                  name="profile"
-                  id="fileUploadField"
-                  onChange={(event) => setImage(event)}
-                ></input>
-              </form>
             </div>
             <br />
             <h4 className="" style={{ color: "black" }}>
@@ -209,14 +199,7 @@ export default function ClientProfile() {
                 <div className="table-responsive">
                   <div className="row">
                     <p>Your CV :</p>
-                    <form action="" method="post" enctype="multipart/form-data">
-                      <input
-                        type="file"
-                        name="cv"
-                        id="fileUploadField"
-                        onChange={(event) => setCv(event)}
-                      ></input>
-                    </form>
+
                     <iframe
                       src={client.cv}
                       frameBorder="0"
