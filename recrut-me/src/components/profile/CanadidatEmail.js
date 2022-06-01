@@ -2,71 +2,81 @@ import axios from "axios";
 import React from "react";
 import "./clientProfile.css";
 import { useState, useEffect } from "react";
-import {
-  MDBCard,
-  MDBCardHeader,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-} from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
-import Img1 from "./icons/suitcase.png";
 
-export default function RecruterProfile() {
-  const [jobs, setJobs] = useState([]);
-  const token = localStorage.getItem("token");
-  const [recruter, setRecruter] = useState({
-    compagnyName: "",
-    idCompagny: "",
+export default function CanadidatEmail() {
+  const [client, setClient] = useState({
+    firstName: "",
+    familyName: "",
+    birthday: "",
     domaine: "",
-    facebookLink: "",
+    githubLink: "",
     linkedinLink: "",
     email: "",
     image: "",
+    cv: "",
   });
+
   const getProfile = () => {
-    const token = localStorage.getItem("token");
-    axios
-      .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
-      .then((result) => {
-        setRecruter({
-          compagnyName: result.data.compagnyName,
-          idCompagny: result.data.idCompagny,
-          domaine: result.data.domaine,
-          facebookLink: result.data.facebookLink,
-          linkedinLink: result.data.linkedinLink,
-          email: result.data.email,
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-        });
-      });
+    const email = localStorage.getItem("candidatEmail");
 
     axios
-      .get("http://localhost:8000/recrutme/authrecruter/offres", {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      })
-      .then((res) => {
-        setJobs(res.data);
-        console.log(jobs);
-      })
-      .catch((err) => console.log(err));
+      .get("http://localhost:8000/recrutme/authclient/candidateInfo/" + email)
+      .then((result) => {
+        console.log(result.data.cv);
+        if (result.data.image === undefined) {
+          setClient({
+            firstName: result.data.firstName,
+            familyName: result.data.familyName,
+            birthday: result.data.birthday,
+            domaine: result.data.domaine,
+            githubLink: result.data.githubLink,
+            linkedinLink: result.data.linkedinLink,
+            email: result.data.email,
+            image:
+              "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+            cv: result.data.cv,
+          });
+        } else {
+          setClient({
+            firstName: result.data.firstName,
+            familyName: result.data.familyName,
+            birthday: result.data.birthday,
+            domaine: result.data.domaine,
+            githubLink: result.data.githubLink,
+            linkedinLink: result.data.linkedinLink,
+            email: result.data.email,
+            image: result.data.image,
+            cv: result.data.cv,
+          });
+        }
+      });
   };
 
-  /*const setImage = (event) => {
+  const setImage = (event) => {
     const token = localStorage.getItem("token");
     const fd = new FormData();
     const file = event.target.files[0];
     fd.append("file", file, file.name);
-
+    console.log("phooto");
     axios
-      .post("http://localhost:8000/recrutme/authrecruter/picture/" + token, fd)
+      .post("http://localhost:8000/recrutme/authclient/picture/" + token, fd)
       .then((result) => {
-        recruter.image = result.data.image;
+        client.image = result.data.image;
       });
-  };*/
+  };
+  const setCv = (event) => {
+    console.log("cc");
+    const token = localStorage.getItem("token");
+    const fd = new FormData();
+    const file = event.target.files[0];
+    fd.append("file", file, file.name);
+    console.log("phooto");
+    axios
+      .post("http://localhost:8000/recrutme/authclient/cv/" + token, fd)
+      .then((result) => {
+        client.cv = result.data.cv;
+      });
+  };
 
   useEffect(() => {
     getProfile();
@@ -80,37 +90,48 @@ export default function RecruterProfile() {
             <div>
               <img
                 className="rounded-circle avatar-xl img-thumbnail"
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                src={client.image}
                 alt="profile"
                 style={{ height: "10rem", width: "10rem" }}
               />
             </div>
-
+            <div className="d-none d-md-block">
+              <form action="" method="post" enctype="multipart/form-data">
+                <input
+                  type="file"
+                  name="profile"
+                  id="fileUploadField"
+                  onChange={(event) => setImage(event)}
+                ></input>
+              </form>
+            </div>
             <br />
-            <h4 className="mb-0" style={{ color: "black" }}>
-              {recruter.compagnyName}
+            <h4 className="" style={{ color: "black" }}>
+              {client.familyName} {client.firstName}
             </h4>
-            <p className="text-muted">@{recruter.domaine}</p>
+            <p className="text-muted">{client.domaine}</p>
 
             <div className="text-left mt-3">
               <p className="text-muted mb-2 font-13">
-                <strong>compagnyName :</strong>{" "}
-                <span className="ml-2">{recruter.compagnyName} </span>
+                <strong>Full Name :</strong>{" "}
+                <span className="ml-2">
+                  {client.familyName} {client.firstName}
+                </span>
               </p>
 
               <p className="text-muted mb-2 font-13">
-                <strong>FacebookLink :</strong>
-                <span className="ml-2">{recruter.facebookLink}</span>
+                <strong>Githublink :</strong>
+                <span className="ml-2">{client.githubLink}</span>
               </p>
 
               <p className="text-muted mb-2 font-13">
-                <strong>LinkedinLink :</strong>
-                <span className="ml-2">{recruter.linkedinLink}</span>
+                <strong>Email :</strong>{" "}
+                <span className="ml-2 ">{client.email}</span>
               </p>
 
-              <p className="text-muted mb-2 font-13">
-                <strong>Email :</strong>
-                <span className="ml-2 ">{recruter.email}</span>
+              <p className="text-muted mb-1 font-13">
+                <strong>Birthday :</strong>{" "}
+                <span className="ml-2">{client.birthday}</span>
               </p>
             </div>
 
@@ -152,9 +173,9 @@ export default function RecruterProfile() {
 
           <div className="card-box">
             <h4 className="header-title" style={{ color: "black" }}>
-              Domaine:
+              Skills
             </h4>
-            <p className="mb-3">{recruter.domaine}</p>
+            <p className="mb-3">{client.domaine}</p>
           </div>
         </div>
 
@@ -178,44 +199,32 @@ export default function RecruterProfile() {
               <div className="tab-pane show active" id="about-me">
                 <h5 className="mb-5 text-uppercase">
                   <i className="mdi mdi-briefcase mr-1"></i>
-                  Offre :
+                  Experience
                 </h5>
 
                 <h5 className="mb-3 mt-4 text-uppercase">
                   <i className="mdi mdi-cards-variant mr-1"></i>
                   Projects
                 </h5>
-                <div>
-                  {jobs.map((job) => (
-                    <div>
-                      <MDBCard>
-                        <MDBCardBody>
-                          <MDBCardTitle
-                            style={{
-                              marginRight: "550px",
-                              color: "#00ADBB",
-                              fontFamily: "Oswald",
-                            }}
-                          >
-                            <div style={{ display: "flex" }}>
-                              <img src={Img1} />
-                              &nbsp;&nbsp;
-                              {job.poste}
-                            </div>
-                          </MDBCardTitle>
-                          <MDBCardText>{job.description}</MDBCardText>
-                          <Link
-                            to={`/candidatures/${job._id}`}
-                            style={{ color: "#ad0e88", fontWeight: "bolder" }}
-                          >
-                            See Candidatures
-                          </Link>
-                          {/* <a href='http://localhost:3000/candidatures' className="btn btn-sm active" style={{ backgroundColor: "#ad0e88", color: "white" }} role="button" aria-pressed="true">Voir candidature</a> */}
-                        </MDBCardBody>
-                      </MDBCard>
-                      <br />
-                    </div>
-                  ))}
+                <div className="table-responsive">
+                  <div className="row">
+                    <p>Your CV :</p>
+                    <form action="" method="post" enctype="multipart/form-data">
+                      <input
+                        type="file"
+                        name="cv"
+                        id="fileUploadField"
+                        onChange={(event) => setCv(event)}
+                      ></input>
+                    </form>
+                    <iframe
+                      src={client.cv}
+                      frameBorder="0"
+                      scrolling="auto"
+                      height="700px"
+                      width="100%"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>

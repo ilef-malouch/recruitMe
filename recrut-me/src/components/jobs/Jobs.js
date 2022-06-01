@@ -2,6 +2,7 @@ import React from "react";
 import "./Jobs.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Jobs() {
   const [allJobs, setallJobs] = useState([]);
@@ -35,7 +36,7 @@ function Jobs() {
   return (
     <div className="container" style={{ marginTop: "100px" }}>
       <div>
-        <div className="col-md-12">
+        <div className="col-md-40">
           <div className="grid search">
             <fieldset>
               <div className="grid-body">
@@ -233,6 +234,19 @@ function Jobs() {
                                   <strong>{job.secteur}</strong>
                                   <br />
                                   {job.description}
+                                  <br />
+                                </td>
+                                <td>
+                                  <Link
+                                    to={`/job/${job._id}`}
+                                    style={{
+                                      color: "#ad0e88",
+                                      fontWeight: "bolder",
+                                      marginLeft: "-70px",
+                                    }}
+                                  >
+                                    Job Details
+                                  </Link>
                                 </td>
                               </tr>
                             ))

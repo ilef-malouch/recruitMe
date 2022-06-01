@@ -27,10 +27,11 @@ const JobDetails = () => {
 
         // const cryptedPassword= bcrypt.hash(details.password,10)
         const candidat = {
-            cv: candidature.cv,
+            
             email: candidature.email,
             phone: candidature.phone,
-            offre:id
+            offre:id,
+            cv: candidature.cv,
         }
         const token = localStorage.getItem('token');
 
@@ -50,17 +51,19 @@ const JobDetails = () => {
     }
 
     const setCv = (event) => {
-        console.log("cc");
+        console.log("first")
         const token = localStorage.getItem("token");
         const fd = new FormData();
         const file = event.target.files[0];
         fd.append("file", file, file.name);
-        console.log("phooto");
+       
         axios
-            .post("http://localhost:8000/recrutme/authclient/cv/" + token, fd)
+            .post("http://localhost:8000/recrutme/candidature/upload/", fd)
             .then((result) => {
-                setCandidature({ ...candidature, cv: result.data.cv })
-                //   client.cv = result.data.cv;
+            
+               setCandidature({ ...candidature, cv:result.data.originalname })
+               // console.log("ggg",candidature.cv);
+            
             });
     };
 
@@ -132,7 +135,7 @@ const JobDetails = () => {
                         <div className="card mb-3 mr-2">
                             <div className="card-body">
                                 <h2 className="card-title">Intrested in this job?</h2>
-                                <form onSubmit={submitHandler} method='POST'  >
+                                <form onSubmit={submitHandler} method='POST' enctype="multipart/form-data" >
                                     <div class="mb-3 ">
                                         <label for="mail" class="form-label">Your Email:</label>
                                         <input type="text" class="form-control" id="mail" aria-describedby="mail" onChange={e => setCandidature({ ...candidature, email: e.target.value })} value={candidature.mail} />
@@ -141,15 +144,6 @@ const JobDetails = () => {
                                         <label for="phone" class="form-label">Phone Number:</label>
                                         <input type="number" class="form-control" id="phone" onChange={e => setCandidature({ ...candidature, phone: e.target.value })} value={candidature.phone} />
                                     </div>
-                                    <p>Your CV :</p>
-                                    <form action="" method="post" enctype="multipart/form-data">
-                                        <input
-                                            type="file"
-                                            name="cv"
-                                            id="fileUploadField"
-                                            onChange={(event) => setCv(event)}
-                                        ></input>
-                                    </form>
                                     <Button margin="1rem" variant="contained" color="primary" type="submit">
                                         Post
                                     </Button>
