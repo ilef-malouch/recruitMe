@@ -80,7 +80,7 @@ export default function CanadidatEmail() {
 
   useEffect(() => {
     getProfile();
-  }, []);
+  });
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
@@ -94,16 +94,6 @@ export default function CanadidatEmail() {
                 alt="profile"
                 style={{ height: "10rem", width: "10rem" }}
               />
-            </div>
-            <div className="d-none d-md-block">
-              <form action="" method="post" enctype="multipart/form-data">
-                <input
-                  type="file"
-                  name="profile"
-                  id="fileUploadField"
-                  onChange={(event) => setImage(event)}
-                ></input>
-              </form>
             </div>
             <br />
             <h4 className="" style={{ color: "black" }}>
@@ -209,14 +199,7 @@ export default function CanadidatEmail() {
                 <div className="table-responsive">
                   <div className="row">
                     <p>Your CV :</p>
-                    <form action="" method="post" enctype="multipart/form-data">
-                      <input
-                        type="file"
-                        name="cv"
-                        id="fileUploadField"
-                        onChange={(event) => setCv(event)}
-                      ></input>
-                    </form>
+
                     <iframe
                       src={client.cv}
                       frameBorder="0"

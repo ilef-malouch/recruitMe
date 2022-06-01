@@ -199,13 +199,13 @@ export default function RecruterProfile() {
                           >
                             <div style={{ display: "flex" }}>
                               <img src={Img1} />
-                              &nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;
                               {job.poste}
                             </div>
                           </MDBCardTitle>
                           <MDBCardText>{job.description}</MDBCardText>
                           <Link
-                            to={`/candidatures/${job._id}`}
+                            to={`/candidatures/${job.id}`}
                             style={{ color: "#ad0e88", fontWeight: "bolder" }}
                           >
                             See Candidatures

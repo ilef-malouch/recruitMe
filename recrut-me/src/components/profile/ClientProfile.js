@@ -80,7 +80,7 @@ export default function ClientProfile() {
 
   useEffect(() => {
     getProfile();
-  },[]);
+  });
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
