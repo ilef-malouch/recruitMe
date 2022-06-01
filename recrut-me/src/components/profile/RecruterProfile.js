@@ -30,16 +30,28 @@ export default function RecruterProfile() {
     axios
       .get("http://localhost:8000/recrutme/authrecruter/recruterInfo/" + token)
       .then((result) => {
-        setRecruter({
-          compagnyName: result.data.compagnyName,
-          idCompagny: result.data.idCompagny,
-          domaine: result.data.domaine,
-          facebookLink: result.data.facebookLink,
-          linkedinLink: result.data.linkedinLink,
-          email: result.data.email,
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-        });
+        if (result.data.image === undefined) {
+          setRecruter({
+            compagnyName: result.data.compagnyName,
+            idCompagny: result.data.idCompagny,
+            domaine: result.data.domaine,
+            facebookLink: result.data.facebookLink,
+            linkedinLink: result.data.linkedinLink,
+            email: result.data.email,
+            image:
+              "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+          });
+        } else {
+          setRecruter({
+            compagnyName: result.data.compagnyName,
+            idCompagny: result.data.idCompagny,
+            domaine: result.data.domaine,
+            facebookLink: result.data.facebookLink,
+            linkedinLink: result.data.linkedinLink,
+            email: result.data.email,
+            image: result.data.image,
+          });
+        }
       });
 
     axios
@@ -55,7 +67,7 @@ export default function RecruterProfile() {
       .catch((err) => console.log(err));
   };
 
-  /*const setImage = (event) => {
+  const setImage = (event) => {
     const token = localStorage.getItem("token");
     const fd = new FormData();
     const file = event.target.files[0];
@@ -66,11 +78,11 @@ export default function RecruterProfile() {
       .then((result) => {
         recruter.image = result.data.image;
       });
-  };*/
+  };
 
   useEffect(() => {
     getProfile();
-  }, []);
+  },[]);
 
   return (
     <div className="container" style={{ marginTop: "100px" }}>
@@ -80,12 +92,20 @@ export default function RecruterProfile() {
             <div>
               <img
                 className="rounded-circle avatar-xl img-thumbnail"
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-                alt="profile"
+                src={recruter.image}
                 style={{ height: "10rem", width: "10rem" }}
               />
             </div>
-
+            <div className="d-none d-md-block">
+              <form action="" method="POST" enctype="multipart/form-data">
+                <input
+                  type="file"
+                  name="profile"
+                  id="fileUploadField"
+                  onChange={(event) => setImage(event)}
+                ></input>
+              </form>
+            </div>
             <br />
             <h4 className="mb-0" style={{ color: "black" }}>
               {recruter.compagnyName}
